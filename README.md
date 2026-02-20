@@ -1,6 +1,6 @@
 # Lectura y practica del Libro The Well-Grounded Rubyist  
 
-![Ejemplo de policies](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/BookCover%20TWGR.jpg)
+![Portada de Libro](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/BookCover%20TWGR.jpg)
 
 # Capítulo 1
 
@@ -10,7 +10,7 @@ Ruby es un lenguaje de programación interpretativo multiproposito, orientado a 
 
 >Un lenguaje de programación interpretado es aquel en el que el código que escribes (el código fuente) no se traduce completamente a lenguaje máquina antes de ejecutarse. En cambio, se ejecuta línea por línea (o instrucción por instrucción) gracias a un programa especial llamado intérprete.
 
-
+![Programación Orientada a Objetos](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/Programaci%C3%B3n%20orientada%20a%20objetos.jpg)
 
 Tiene un framework muy popular llamado Ruby on Rails usado para crear aplicaciones web modernas (backend + base de datos). Creado por David Heinemeier Hansson (en 2004–2005).
 
