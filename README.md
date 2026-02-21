@@ -25,6 +25,11 @@ Este capítulo divide al lenguaje de programación Ruby en tres partes fundament
 
 3. Herramientas de comandos que trae de fábrica Ruby, con las que corres el intérprete y otras funciones importantes.
 
-Ruby en mayúscula es el nombre, ruby en minúscula es como se llama el intérprete y RUBY no existe.
+Ruby en mayúscula es el nombre, ruby en minúscula es como se llama el intérprete y RUBY no es un acrónimo, no existe.
 
 
+### Instala y ejecuta Ruby
+
+Ruby se descarga de la [página oficial](https://www.ruby-lang.org/en/)
+
+La forma más básica de ejecutar código es con la consola interactiva de Ruby _irb_, la abres en terminal y copias tu código ahí.
