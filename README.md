@@ -15,7 +15,14 @@ Ruby es un lenguaje de programación interpretativo multiproposito, orientado a 
 Tiene un framework muy popular llamado Ruby on Rails usado para crear aplicaciones web modernas (backend + base de datos). Creado por David Heinemeier Hansson (en 2004–2005).
 
 
-##Capítulo 1: Impulsando tu alfabetización en Ruby
+## Capítulo 1: Impulsando tu alfabetización en Ruby
 
+Este capítulo divide al lenguaje de programación Ruby en tres partes fundamentales:
+
+1. Lenguaje base: principios de diseño, sintaxis y semántica. 
+
+2. Extensiones y librerías que trae Ruby de fábrica, y las opciones para agregar por nuestra cuenta.
+
+3. Herramientas de comandos que trae de fábrica Ruby, con las que corres el intérprete y otras funciones importantes.
 
 
