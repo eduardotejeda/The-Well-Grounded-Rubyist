@@ -94,10 +94,12 @@ end
 Los enunciados condicionales termina con la palabra end.
 
 ### Objetos con valores especiales
+
 ```
 true
 false
-nil```
+nil
+```
 
 Los objetos true y false por  lo general son el retorno de enunciados condicionales. El objeto nil representa la ausencia de valor o resultado.
 
@@ -108,6 +110,7 @@ false y nil hacen que un enunciado condicional tenga el resultado falso. Todos l
 La palabra clave ```selft``` se refiere al objeto por defecto. Self es un rol que múltiples objetos pueden tener, dependiendo del ambiente en que se ejecutan. Las llamas de métodos que específicamente llaman a un objeto se llaman self.
 
 ### Comentarios 
+
 ```
 # A comment
 x = 1 # A comentar 
