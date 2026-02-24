@@ -35,3 +35,81 @@ Ruby se descarga de la [página oficial.](https://www.ruby-lang.org/en/)
 La forma más básica de ejecutar código es con la consola interactiva de Ruby _irb_, la abres en terminal y copias tu código ahí.
 
 ![Ejemplo irb](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/irb%20ejemplo.jpg)
+
+### Aritmética 
+
+2+3 (adicción)
+2-3 (sustracción)
+2*3 (multiplicación)
+2/3 (división)
+2/3.0 (división, punto flotante)
+
+Estas operaciones funcionan con números enteros y decimales.
+
+### Asignación 
+
+x = 1
+Springs = "hello"
+
+Es símbolo de "=" Asignación el objeto de la derecha a la variable de la izquierda. El objeto es un valor que es representado por la variable
+
+### Comparación de dos valores
+
+X == Y se usando dos símbolos de "==".
+
+### Convertir un texto numérico a número
+
+x = "100".to_i
+S = "100"
+X = S.to_i
+
+La aritmética en Ruby solo funciona si los datos son tipo número. Para convertir un texto a número se usa el método ".to_i" al final de la variable o texto que se quiera convertir.
+
+### Entrada y salida
+
+print "hello"
+Pues "hello"
+
+
+x = "hello"
+p x
+
+puts agrega una nueva línea en pantalla, print no. 
+
+La p ejecuta un inspector de texto que d información extra de lo que se imprime.
+
+gets
+Springs = gets
+
+Activa la entrada del teclado cuando se usa. En este ejemplo se asigno a una variable. El cursor va esperar que el usuario introduzca con el teclado.
+
+x = 1
+Y = 1
+If x == y
+     Puts "yes!"
+Else
+      Pues "no!"
+end
+
+Los enunciados condicionales termina con la palabra end.
+
+### Objetos con valores especiales
+
+true
+false
+nil
+
+Los objetos true y false por  lo general son el retorno de enunciados condicionales. El objeto nil representa la ausencia de valor o resultado.
+
+false y nil hacen que un enunciado condicional tenga el resultado falso. Todos los demás, true o hasta 0 o texto vacío, dan un resultando positivo.
+
+### self
+
+La palabra clave selft se refiere al objeto por defecto. Self es un rol que múltiples objetos pueden tener, dependiendo del ambiente en que se ejecutan. Las llamas de métodos que específicamente llaman a un objeto se llaman self.
+
+```
+# A comment
+x = 1 # A comentar 
+```
+
+Los comentarios son ignorados por el intérprete
