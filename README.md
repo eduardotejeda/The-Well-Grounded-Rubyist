@@ -101,13 +101,13 @@ false
 nil
 ```
 
-Los objetos true y false por  lo general son el retorno de enunciados condicionales. El objeto nil representa la ausencia de valor o resultado.
+Los objetos ```true``` y ```false``` por  lo general son el retorno de enunciados condicionales. El objeto ```nil``` representa la ausencia de valor o resultado.
 
-false y nil hacen que un enunciado condicional tenga el resultado falso. Todos los demás, true o hasta 0 o texto vacío, dan un resultando positivo.
+```false``` y ```nil``` hacen que un enunciado condicional tenga el resultado falso. Todos los demás, ```true``` o hasta ```0``` o texto vacío, dan un resultando positivo.
 
 ### self
 
-La palabra clave ```selft``` se refiere al objeto por defecto. Self es un rol que múltiples objetos pueden tener, dependiendo del ambiente en que se ejecutan. Las llamas de métodos que específicamente llaman a un objeto se llaman self.
+La palabra clave ```self``` se refiere al objeto por defecto. Self es un rol que múltiples objetos pueden tener, dependiendo del ambiente en que se ejecutan. Las llamas de métodos que específicamente llaman a un objeto se llaman self.
 
 ### Comentarios 
 
@@ -116,4 +116,38 @@ La palabra clave ```selft``` se refiere al objeto por defecto. Self es un rol qu
 x = 1 # A comentar 
 ```
 
-Los comentarios son ignorados por el intérprete
+Los comentarios son ignorados por el intérprete.
+
+## Identificadores de Ruby
+
+Variable: local, instancia, clase y global
+Constantes
+Palabras claves
+Nombre de métodos
+
+Estos son los tipos de elementos que encontraremos en un programa de Ruby. Hay que saber reconocerlos.
+
+### Variables locales
+
+Empiezan en minúscula o con underscore; la convención en Ruby es escribir las palabras separadas con "_". 
+
+Ejemplo: first_name
+
+### Variables de instancia
+
+Cumplen con el propósito de almacenar información dentro de un objeto individual. Siempre empiezan con "@" y siguen las mismas reglas de escritura de las variables locales.
+
+Ejemplo: @las_name
+
+### Variables de clase
+
+Almacena la información de la jerarquía de clases; siguen las mismas reglas que las variables de instancia, salvo que empiezan con doble @@.
+
+Ejemplo: @@total_usuarios
+
+### Global variables
+
+No siguen la convención de las variables locales. Siempre empiezan con el signo de "$". 
+
+Ejemplo: $:, $1, $LOAD_PATH
+
