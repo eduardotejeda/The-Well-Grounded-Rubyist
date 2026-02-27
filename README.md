@@ -32,9 +32,9 @@ Ruby en mayúscula es el nombre, ruby en minúscula es como se llama el intérpr
 
 Ruby se descarga de la [página oficial.](https://www.ruby-lang.org/en/)
 
-La forma más básica de ejecutar código es con la consola interactiva de Ruby _irb_, la abres en terminal y copias tu código ahí.
+La forma más básica de ejecutar código es con la consola interactiva de Ruby _irb_, la abres en terminal y copias tu código ahí. Ejemplo en Windows:
 
-![Ejemplo irb](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/irb%20ejemplo.jpg)
+![Ejemplo irb en Windows](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/irb%20ejemplo.jpg)
 
 ### Aritmética 
 
@@ -51,7 +51,7 @@ Estas operaciones funcionan con números enteros y decimales.
 x = 1
 Springs = "hello"
 ```
-Es símbolo de "=" Asignación el objeto de la derecha a la variable de la izquierda. El objeto es un valor que es representado por la variable
+Es símbolo de "=" asigna el objeto de la derecha a la variable de la izquierda. El objeto es un valor que es representado por la variable
 
 ### Comparación de dos valores
 
@@ -68,7 +68,7 @@ La aritmética en Ruby solo funciona si los datos son tipo número. Para convert
 ### Entrada y salida
 ```
 print "hello"
-Pues "hello"
+puts "hello"
 ```
 ```
 x = "hello"
@@ -84,11 +84,11 @@ Springs = gets
 Activa la entrada del teclado cuando se usa. En este ejemplo se asigno a una variable. El cursor va esperar que el usuario introduzca con el teclado.
 ```
 x = 1
-Y = 1
-If x == y
-     Puts "yes!"
-Else
-      Pues "no!"
+y = 1
+if x == y
+     puts "yes!"
+else
+      puts "no!"
 end
 ```
 Los enunciados condicionales termina con la palabra end.
@@ -120,10 +120,10 @@ Los comentarios son ignorados por el intérprete.
 
 ## Identificadores de Ruby
 
-Variable: local, instancia, clase y global
-Constantes
-Palabras claves
-Nombre de métodos
+1. Variable: local, instancia, clase y global
+2. Constantes
+3. Palabras claves
+4. Nombre de métodos
 
 Estos son los tipos de elementos que encontraremos en un programa de Ruby. Hay que saber reconocerlos.
 
@@ -131,23 +131,24 @@ Estos son los tipos de elementos que encontraremos en un programa de Ruby. Hay q
 
 Empiezan en minúscula o con underscore; la convención en Ruby es escribir las palabras separadas con "_". 
 
-Ejemplo: first_name
+Ejemplo: ```first_name```
 
 ### Variables de instancia
 
 Cumplen con el propósito de almacenar información dentro de un objeto individual. Siempre empiezan con "@" y siguen las mismas reglas de escritura de las variables locales.
 
-Ejemplo: @las_name
+Ejemplo: ```@las_name```
 
 ### Variables de clase
 
 Almacena la información de la jerarquía de clases; siguen las mismas reglas que las variables de instancia, salvo que empiezan con doble @@.
 
-Ejemplo: @@total_usuarios
+Ejemplo: ```@@total_usuarios```
 
 ### Global variables
 
 No siguen la convención de las variables locales. Siempre empiezan con el signo de "$". 
 
-Ejemplo: $:, $1, $LOAD_PATH
+Ejemplo: ```$:, $1, $LOAD_PATH```
+
 
