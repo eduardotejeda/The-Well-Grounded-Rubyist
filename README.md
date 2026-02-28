@@ -27,14 +27,17 @@ Este capítulo divide al lenguaje de programación Ruby en tres partes fundament
 
 Ruby en mayúscula es el nombre, ruby en minúscula es como se llama el intérprete y RUBY no es un acrónimo, no existe.
 
+## 1.1 
 
-### Instala y ejecuta Ruby
+### 1.1.1 Instala y ejecuta Ruby
 
 Ruby se descarga de la [página oficial.](https://www.ruby-lang.org/en/)
 
 La forma más básica de ejecutar código es con la consola interactiva de Ruby _irb_, la abres en terminal y copias tu código ahí. Ejemplo en Windows:
 
 ![Ejemplo irb en Windows](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/irb%20ejemplo.jpg)
+
+### 1.1.2 Sintaxis 
 
 ### Aritmética 
 
@@ -118,7 +121,7 @@ x = 1 # A comentar
 
 Los comentarios son ignorados por el intérprete.
 
-## Identificadores de Ruby
+## 1.1.3 Identificadores de Ruby
 
 1. Variable: local, instancia, clase y global
 2. Constantes
@@ -145,10 +148,38 @@ Almacena la información de la jerarquía de clases; siguen las mismas reglas qu
 
 Ejemplo: ```@@total_usuarios```
 
-### Global variables
+### Variables globales 
 
 No siguen la convención de las variables locales. Siempre empiezan con el signo de "$". 
 
 Ejemplo: ```$:, $1, $LOAD_PATH```
 
 
+### Constantes
+
+La convención establece que deben empezar con mayúscula. Y si es larga se puede usar tipo camello o con subrayar. Ejemplos:
+```FIRST_NAME``` y ```FirstName```. 
+
+### Palabras clave
+
+Ruby tiene muchas palabras clave predefinidas. Como ```def``` para definición de métodos, ```class``` para definición de clase, ```if``` condicional y ```__FILE__``` da el nombre del archivo que está ejecutando. Hay unas 40.
+
+### Nombre de métodos
+
+Los nombres de los métodos en Ruby siguen las mismas reglas que las variables locales (excepto que pueden terminar en ?, ! o =). Por diseño los métodos no deben llamar la atención en el texto.
+
+### 1.1.4 Llamada de métodos, mensajes y objetos en Ruby
+
+Ruby ve a todas las estructuras-- desde los tipos de datos escalares que representan un único valor atómico, hasta las estructuras complejas como las matrices -- como objetos. 
+
+>Los tipos de datos escalares en programación representan un único valor atómico, a diferencia de las estructuras complejas. Los principales tipos escalares son enteros (int), números de punto flotante/decimales (float/double), booleanos (bool, verdadero/falso) y caracteres (char), fundamentales para operaciones básicas, cálculos y lógica.
+
+Cada objetos es capaz de entender una determinada cantidad de mensajes. Cada mensaje que un objeto entiendo corresponde a un método, una rutina ejecutable con nombre cuya ejecución el objeto tiene la capacidad de activar
+
+Los objetos son representados por constructores literales -- como las doble comillas "" en una cadena de caracteres, un tipo de dato utilizado para representar texto -- o variables a las que han sido enlazadas.   
+
+El enviado de los mensajes se logra con el operador especial punto ".": el mensaje a la derecha del "." es enviado al objeto a la izquierda del punto.( Hay otras formas de enviar mensajes a objetos, pero el "." es el mas común). Recordemos el ejemplo anteriorÑ
+
+```x = "100".to_i```
+
+El punto indica que el mensaje ```to_i``` esta siendo enviado a la cadena de caracteres ```"100"```. El ```"100"``` es el receptor del mensaje. También podemos decir que se llama al método to_i en la cadena "100". El resultado de la llamada al método (el entero 100) sirve como el lado derecho de la asignación a la variable x. 
