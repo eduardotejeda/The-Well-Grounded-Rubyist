@@ -183,3 +183,39 @@ El enviado de los mensajes se logra con el operador especial punto ".": el mensa
 ```x = "100".to_i```
 
 El punto indica que el mensaje ```to_i``` esta siendo enviado a la cadena de caracteres ```"100"```. El ```"100"``` es el receptor del mensaje. También podemos decir que se llama al método to_i en la cadena "100". El resultado de la llamada al método (el entero 100) sirve como el lado derecho de la asignación a la variable x. 
+
+### ¿Por que la doble terminología?
+
+En Ruby, es mas correcto decir, se manda un mensaje a un objeto que lo recibe, y el objeto ejecuta el método correspondiente. Pero a veces no hay método correspondiente. Puedes poner cualquier cosa en el lado derecho del punto ".", y no hay garantía al recibirlo tendrá un método que coincida con el mensaje enviado.
+
+Suena caótico, pero no lo es, porque los métodos pueden interceptar mensajes desconocidos y tratar de darles sentido. Esto es casi siempre logrado usando el método ```method_missing``` explicado en el capítulo 4. Ruby on Rails usa mucho esa técnica.
+
+Los métodos pueden tener argumentos, que también son objetos. Casi todo es un objeto en Ruby; aun hay unas estructuras semánticas que ayudan a crear y manipular objetos; esas estructuras no lo son. Aquí un ejemplo de un llamado a un método con paréntesis:
+
+x = "100".to_is(9)
+
+Ese argumento 9 genera un decimal entero equivalente a 100 en base 9: el resultado sería 81 decimal.
+
+Ese ejemplo muestra los paréntesis alrededor del argumento "(9)"; esos paréntesis son opcionales, pero en operaciones más complejas es mejor agregarlos para hacer el texto más entendible.
+
+Todo el universo de Ruby consiste en objetos y mensajes que son enviados a ellos. La mayor parte del tiempo como programador de Ruby consiste en definir métodos (decirles qué van a hacer) y mandando mensajes a métodos (ordenándoles que hagan algo).
+
+También, para hacer llamadas de métodos, existe el bareword-style invocations.
+
+Cuando escribimos:
+
+puts "Hello"
+
+Le estamos diciendo a Ruby que mande el mensaje puts con el argumento "Hello" al objeto por defecto self. A menudo hay un self cuando el programa corre.
+
+El concepto de objeto en Ruby es lo más importante.  Seguido del concepto de clases.
+
+self.puts("Hello")
+
+### El origen de los objetos en las clases 
+
+Las clases definen la funcionalidad de un objeto, y cada objeto es una instancia de exactamente una clase. Ruby trae un gran número de clases de fábrica, que representan tipos de datos como caracteres, listas y enteros. Cada vez que creamos un objeto carácter, creamos una instancia de la clase string.
+
+Los objetos pueden cambiar, adquiriendo métodos y comportamientos que no fueron definidos en su clase. La clase es responsable de llevar un objeto a la existencia, en un proceso llamado instantiation (instanciar), pero después de ahí el objeto tiene vida propia.
+
+La capacidad de un objeto de adoptar comportamientos fuera de su clase es uno de los principios fundamentales en Ruby.
