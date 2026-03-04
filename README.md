@@ -219,3 +219,20 @@ Las clases definen la funcionalidad de un objeto, y cada objeto es una instancia
 Los objetos pueden cambiar, adquiriendo métodos y comportamientos que no fueron definidos en su clase. La clase es responsable de llevar un objeto a la existencia, en un proceso llamado instantiation (instanciar), pero después de ahí el objeto tiene vida propia.
 
 La capacidad de un objeto de adoptar comportamientos fuera de su clase es uno de los principios fundamentales en Ruby.
+
+## Escribiendo y salvando un programa simple          
+
+Inicia con un convertidor de temperatura de Celsius a Fahrenheit, no usaremos números flotantes para simplificar el ejemplo. Este ejemplo sera usado multiples veces a medida que avancemos. 
+
+*Ordenar la salida del programa
+*Aceptar entrada por teclado
+*Leer datos desde un archivo
+*Escribir el resultado en un archivo
+
+### 1.1 Primer ejemplo de convertidor de temperatura (nombre del archivo c2f.rb) 
+
+```celsius = 100 
+fahrenheit = (celsius * 9 / 5) + 32
+puts "La temperatura en Fahrenheit es: "
+puts fahrenheit 
+puts "."```
