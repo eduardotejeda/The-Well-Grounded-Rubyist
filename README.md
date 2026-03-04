@@ -224,10 +224,10 @@ La capacidad de un objeto de adoptar comportamientos fuera de su clase es uno de
 
 Inicia con un convertidor de temperatura de Celsius a Fahrenheit, no usaremos números flotantes para simplificar el ejemplo. Este ejemplo sera usado multiples veces a medida que avancemos. 
 
-*Ordenar la salida del programa
-*Aceptar entrada por teclado
-*Leer datos desde un archivo
-*Escribir el resultado en un archivo
+* Ordenar la salida del programa
+* Aceptar entrada por teclado
+* Leer datos desde un archivo
+* Escribir el resultado en un archivo
 
 ### 1.1 Primer ejemplo de convertidor de temperatura (nombre del archivo c2f.rb) 
 
