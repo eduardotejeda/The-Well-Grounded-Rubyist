@@ -2,6 +2,6 @@
 
 celsius = 100 
 fahrenheit = (celsius * 9 / 5) + 32
-puts "La temperatura en Fahrenheit es: "
-puts fahrenheit 
+print "La temperatura en Fahrenheit es: "
+print fahrenheit 
 puts "."

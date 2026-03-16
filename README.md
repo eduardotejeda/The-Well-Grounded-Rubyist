@@ -85,7 +85,7 @@ p x
 
 puts agrega una nueva línea en pantalla, print no.
 
-La p ejecuta un inspector de texto que d información extra de lo que se imprime.
+La p ejecuta un inspector de texto que da información extra de lo que se imprime.
 
 ```
 gets
@@ -257,3 +257,7 @@ Si se quiere revisar la sintaxis antes de ejecutar, usar `-cw`:
 `$ ruby -cw c2f.rb`
 
 El `-cw` es una abreviatura de dos indicadores: El `-c` significa busca errores de sintaxis y el `-w` le indica a Ruby que eleve el nivel de las advertencias.
+
+Si todo esta bien con el código fuente, el resultado debería ser: `Syntax OK`.
+
+### Segunda iteración del convertidor
