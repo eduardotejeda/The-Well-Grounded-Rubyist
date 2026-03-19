@@ -261,3 +261,8 @@ El `-cw` es una abreviatura de dos indicadores: El `-c` significa busca errores 
 Si todo esta bien con el código fuente, el resultado debería ser: `Syntax OK`.
 
 ### Segunda iteración del convertidor
+
+Hay diferencias entre el comando ```puts``` y el comando ```pring```; el primero agrega una línea antes de presentar el resultado en pantalla. Mientras que el segundo lo imprime en pantalla y concluye sin agregar el espacio.
+
+
+```puts``` La forma abreviada de la oración en inglés "put string", que significa colocar caracteres.
