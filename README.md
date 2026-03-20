@@ -265,4 +265,19 @@ Si todo esta bien con el código fuente, el resultado debería ser: `Syntax OK`.
 Hay diferencias entre el comando ```puts``` y el comando ```pring```; el primero agrega una línea antes de presentar el resultado en pantalla. Mientras que el segundo lo imprime en pantalla y concluye sin agregar el espacio.
 
 
-```puts``` La forma abreviada de la oración en inglés "put string", que significa colocar caracteres.
+```puts``` La forma abreviada de la oración en inglés "put string", que significa colocar caracteres. Aunque ```put``` puede no evocar intuitivamente la noción de saltar a la siguiente línea, eso es lo que hace ```puts```. Imprime lo que le digas y automáticamente agrega otra línea.
+
+
+ADVERTENCIA: En algunas plataformas (Windows, en particular), se imprime un carácter de salto de línea adicional al final de la ejecución de un programa. Esto significa que una instrucción `print` que en realidad debería ser `puts` será difícil de detectar, ya que se comportará como tal.
+
+## 1.1.7 Entrada y salida de teclado y archivos
+
+Ruby ofrece numerosas técnicas para leer datos durante la ejecución del programa, tanto desde el teclado como desde archivos de disco.
+
+ENTRADA DE TECLADO
+
+Un programa que repite constantemente que 100 °C equivalen a 212 °F tiene poca utilidad. Un programa más útil permite especificar una temperatura en grados Celsius y proporciona su equivalente en Fahrenheit.
+
+Modificar el programa para incorporar esta funcionalidad implica añadir un par de pasos y utilizar un método de cada una de las tablas 1.1 y 1.2: `gets` (obtener una línea de entrada del teclado) y `to_i` (convertir a entero), uno de los cuales ya conoces.
+
+Dado que se trata de un programa nuevo, no solo de una corrección, puedes colocar el código del siguiente listado en un nuevo archivo: `c2fi.rb` (la `i` significa interactivo).
