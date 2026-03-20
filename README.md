@@ -262,11 +262,9 @@ Si todo esta bien con el código fuente, el resultado debería ser: `Syntax OK`.
 
 ### Segunda iteración del convertidor
 
-Hay diferencias entre el comando ```puts``` y el comando ```pring```; el primero agrega una línea antes de presentar el resultado en pantalla. Mientras que el segundo lo imprime en pantalla y concluye sin agregar el espacio.
+Hay diferencias entre el comando `puts` y el comando `pring`; el primero agrega una línea antes de presentar el resultado en pantalla. Mientras que el segundo lo imprime en pantalla y concluye sin agregar el espacio.
 
-
-```puts``` La forma abreviada de la oración en inglés "put string", que significa colocar caracteres. Aunque ```put``` puede no evocar intuitivamente la noción de saltar a la siguiente línea, eso es lo que hace ```puts```. Imprime lo que le digas y automáticamente agrega otra línea.
-
+`puts` La forma abreviada de la oración en inglés "put string", que significa colocar caracteres. Aunque `put` puede no evocar intuitivamente la noción de saltar a la siguiente línea, eso es lo que hace `puts`. Imprime lo que le digas y automáticamente agrega otra línea.
 
 ADVERTENCIA: En algunas plataformas (Windows, en particular), se imprime un carácter de salto de línea adicional al final de la ejecución de un programa. Esto significa que una instrucción `print` que en realidad debería ser `puts` será difícil de detectar, ya que se comportará como tal.
 
@@ -281,3 +279,16 @@ Un programa que repite constantemente que 100 °C equivalen a 212 °F tiene poca
 Modificar el programa para incorporar esta funcionalidad implica añadir un par de pasos y utilizar un método de cada una de las tablas 1.1 y 1.2: `gets` (obtener una línea de entrada del teclado) y `to_i` (convertir a entero), uno de los cuales ya conoces.
 
 Dado que se trata de un programa nuevo, no solo de una corrección, puedes colocar el código del siguiente listado en un nuevo archivo: `c2fi.rb` (la `i` significa interactivo).
+
+### 1.2 Segundo ejemplo de convertidor de temperatura (nombre del archivo c2fi.rb)
+
+```
+print "Hello. Please enter a Celsius value: "
+celsius = gets
+fahrenheit = (celsius.to_i * 9 / 5) + 32
+print "The Fahrenheit equivalent is "
+print fahrenheit
+puts "."
+```
+
+En la terminal, ubica la carpeta donde esta el archivo, y escrbribes para ejecutar: `ruby c2fi.rb`
