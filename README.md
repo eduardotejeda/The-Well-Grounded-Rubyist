@@ -305,3 +305,19 @@ Esta versión ahorra variables (no hay ninguna), pero requiere que quien la lea 
 
 ENTRADA DESDE ARCHIVO
 
+Leer un archivo desde un programa Ruby no es mucho más difícil, al menos en muchos casos, que leer una línea de entrada de teclado. La próxima versión de nuestro convertidor de temperatura leerá un número de un archivo y lo convertirá de Celsius a Fahrenheit. Primero, crea un nuevo archivo llamado `temp.dat` (datos de temperatura), que contenga una línea con un número:
+
+100
+
+Ahora, crea un tercer archivo de programa, llamado `c2fin.rb` (para entrada de archivo).
+
+### 1.3 Ejemplo de leer de un archivo (nombre c2fin.rb)
+
+````puts "Reading Celsius temperature value from data file..."
+num = File.read("temp.dat")
+celsius = num.to_i
+fahrenheit = (celsius * 9 / 5) + 32
+puts "The number is " + num
+print "Result: "
+puts fahrenheit```
+````
