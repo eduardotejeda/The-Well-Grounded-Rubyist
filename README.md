@@ -302,3 +302,6 @@ print "El equivalente en Fahrenheit es ", gets.to_i * 9 / 5 + 32, ".\n"```
 
 Esta versión ahorra variables (no hay ninguna), pero requiere que quien la lea siga un conjunto de expresiones algo más denso (aunque más corto). Cualquier programa suele tener varios puntos donde tendrás que decidir entre escribir código más largo (pero quizás más claro) y más corto (pero tal vez un poco críptico). Y a veces, lo más corto puede ser más claro. Todo forma parte del desarrollo de un estilo de programación en Ruby.
 ````
+
+ENTRADA DESDE ARCHIVO
+
