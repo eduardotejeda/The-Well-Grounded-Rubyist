@@ -324,33 +324,40 @@ puts fahrenheit```
 
 El resultado debe verse así:
 
-````$ ruby c2fin.rb
+```
+$ ruby c2fin.rb
 Leyendo la temperatura en Celsius desde un archivo de datos...
 El número es 100
-Resultado: 212```
+Resultado: 212
+```
 
 ### Ejercicios
 
 1. Utilice el código de los listados 1.3 y 1.4 para crear `c2fio.rb`, un programa que lee un número de un archivo y escribe su conversión a grados Fahrenheit en otro archivo. El programa resultante imprimirá la siguiente salida, y temp.out contendrá el valor en grados Fahrenheit equivalente al valor de temp.dat:
 
-```Leyendo el valor de temperatura en Celsius del archivo de datos...
-Guardando el resultado en el archivo de salida 'temp.out'```
+```
+Leyendo el valor de temperatura en Celsius del archivo de datos...
+Guardando el resultado en el archivo de salida 'temp.out'
+```
 
 2. Ahora convierta de Fahrenheit a Celsius utilizando las mismas técnicas. Considere
-cambiar los nombres de sus variables (celsius, fahrenheit) para que coincidan con la nueva
-conversión. Puede usar los mismos archivos de entrada y salida (`temp.dat` y
-`temp.out`). El programa resultante imprimirá la siguiente salida:
+   cambiar los nombres de sus variables (celsius, fahrenheit) para que coincidan con la nueva
+   conversión. Puede usar los mismos archivos de entrada y salida (`temp.dat` y
+   `temp.out`). El programa resultante imprimirá la siguiente salida:
 
-```Leyendo el valor de temperatura en grados Fahrenheit del archivo de datos...
-Guardando el resultado en el archivo de salida 'temp.out'```
+```
+Leyendo el valor de temperatura en grados Fahrenheit del archivo de datos...
+Guardando el resultado en el archivo de salida 'temp.out'
+```
 
 Intente ingresar los siguientes valores en `temp.dat` y asegúrese de que los valores correspondientes se escriban en temp.out:
 
-|`temp.dat`|`temp.out`|
-|----------|----------|
-|212       |100       |
-|50        |10        |
-|5         |-15       |
+| `temp.dat` | `temp.out` |
+| ---------- | ---------- |
+| 212        | 100        |
+| 50         | 10         |
+| 5          | -15        |
 
+```
 
-````
+```
