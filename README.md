@@ -353,10 +353,10 @@ Guardando el resultado en el archivo de salida 'temp.out'
 Intente ingresar los siguientes valores en `temp.dat` y asegúrese de que los valores correspondientes se escriban en temp.out:
 
 | `temp.dat` | `temp.out` |
-| ---------- | ---------- |
-| 212        | 100        |
-| 50         | 10         |
-| 5          | -15        |
+| :--------: | :--------: |
+|    212     |    100     |
+|     50     |     10     |
+|     5      |    -15     |
 
 ```
 
