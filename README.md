@@ -311,6 +311,7 @@ Leer un archivo desde un programa Ruby no es mucho más difícil, al menos en mu
 
 Ahora, crea un tercer archivo de programa, llamado `c2fin.rb` (para entrada de archivo).
 
+
 ### 1.3 Ejemplo de leer de un archivo (nombre c2fin.rb)
 
 ````puts "Leyendo la temperatura en Celsius desde un archivo de datos..."
@@ -330,6 +331,22 @@ Leyendo la temperatura en Celsius desde un archivo de datos...
 El número es 100
 Resultado: 212
 ```
+
+### 1.4 Ejemplo de convertidor de temperatura con salida a un archivo (c2fout.rb)
+
+ESCRIBIR A UN ARCHIVO
+
+```
+print "Hello. Please enter a Celsius value: "
+celsius = gets.to_i
+fahrenheit = (celsius * 9 / 5) + 32
+puts "Saving result to output file 'temp.out'"
+fh = File.new("temp.out", "w")
+fh.puts fahrenheit
+fh.close
+```
+
+La llamada al método `fh.puts fahrenheit` imprime el valor de Fahrenheit en el archivo para el cual fh es un identificador de escritura. Si inspecciona el archivo temp.out, debería ver que contiene el equivalente en Fahrenheit del número que ingresó.
 
 ### Ejercicios
 
@@ -358,6 +375,4 @@ Intente ingresar los siguientes valores en `temp.dat` y asegúrese de que los va
 |     50     |     10     |
 |     5      |    -15     |
 
-```
 
-```
