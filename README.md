@@ -379,7 +379,7 @@ Intente ingresar los siguientes valores en `temp.dat` y asegúrese de que los va
 Tener Ruby instalado en tu sistema significa tener varios directorios de disco con
 bibliotecas y archivos de soporte del lenguaje Ruby. La mayoría de las veces, Ruby sabe cómo encontrar lo que necesita sin necesidad de que se le pregunte. Pero conocer la instalación de Ruby es fundamental para tener una buena base en Ruby.
 
-Ruby puede indicarte dónde se encuentran sus archivos de instalación. Para obtener esta información durante una sesión de irb, necesitas precargar un paquete de bibliotecas de Ruby llamado rbconfig en tu sesión de irb. rbconfig es una interfaz para acceder a mucha información de configuración compilada sobre tu instalación de Ruby, y puedes hacer que irb la cargue usando el parámetro de línea de comandos -r de irb y el nombre del paquete:
+Ruby puede indicarte dónde se encuentran sus archivos de instalación. Para obtener esta información durante una sesión de irb, necesitas precargar un paquete de bibliotecas de Ruby llamado `rbconfig` en tu sesión de `irb`. `rbconfig` es una interfaz para acceder a mucha información de configuración compilada sobre tu instalación de Ruby, y puedes hacer que `irb` la cargue usando el parámetro de línea de comandos `-r` de `irb` y el nombre del paquete:
 
 ```
 $ irb --simple-prompt -r rbconfig
@@ -394,3 +394,11 @@ Ahora puedes solicitar información. Por ejemplo, puede averiguar dónde se han 
 `RbConfig::CONFIG` es una constante que hace referencia al hash (una especie de estructura de datos) donde Ruby almacena su información de configuración. La cadena "bindir" es una clave del hash. Al consultar el hash con la clave "bindir", se obtiene el valor hash correspondiente, que es el nombre del directorio de instalación del archivo binario.
 
 El resto de la información de configuración está disponible de la misma manera: como valores dentro de la estructura de datos de configuración a los que se puede acceder con claves hash específicas. Para obtener información de instalación adicional, debe reemplazar `bindir` en el comando `irb` con otros términos. Pero siempre se utiliza la misma fórmula básica: RbConfig:::CONFIG["término"]. La Tabla 1.5 describe los términos y los directorios a los que hacen referencia.
+
+### 1.5 Terminos de RbConfig y carpetas de Ruby
+
+|  Termino   |       Contenido del directorio       |
+| :--------: | :----------------------------------: |
+| rubylibdir |          Libreria estandar           |
+|   bindir   | Herramientas de la linea de comandos |
+
