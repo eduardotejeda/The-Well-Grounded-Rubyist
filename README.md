@@ -401,8 +401,19 @@ El resto de la información de configuración está disponible de la misma maner
 | :---------: | :----------------------------------------------------------------: |
 | rubylibdir  |                         Libreria estandar                          |
 |   bindir    |                Herramientas de la linea de comandos                |
-|   archdir   |      Extensiones y bibliotecas específicas de la arquitectura       |
+|   archdir   |      Extensiones y bibliotecas específicas de la arquitectura      |
 |   sitedir   | Extensiones y bibliotecas propias o de terceros (escritas en Ruby) |
 |  vendordir  |       Extensiones de terceros y librerias (escrito en Ruby)        |
 | sitelibdir  |    Tus propias extensiones del lenguaje Ruby (escrito en Ruby)     |
 | sitearchdir |      Tus propias extensiones del lenguaje Ruby (escrito en C)      |
+
+La siguiente sección contiene una lista de carpetas de intalación y lo que contienen.
+
+### 1.2.1 Libreria estandar (RbConfig::CONFIG[“rubylibdir”])
+
+En rubylibdir encontraras programas escritos en Ruby. Almacenan librerias estandar, estas son sus funcionalidades:
+
+uri.rb
+fileustils.rb
+tempfile.rb
+benchmark.rb
