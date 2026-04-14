@@ -413,7 +413,7 @@ La siguiente sección contiene una lista de carpetas de intalación y lo que con
 
 En rubylibdir encontraras programas escritos en Ruby. Almacenan librerias estandar, estas son sus funcionalidades:
 
-uri.rb
-fileustils.rb
-tempfile.rb
-benchmark.rb
+ uri.rb - Herramientas para el manejo uniforme de URIs
+ fileustils.rb - Utilidades para manipular archivos de forma fácil desde programas de Ruby.
+ tempfile.rb - Mecanismos automáticos para la creación de archivos temporales.
+ benchmark.rb - Una librería que mide el rendimiento de programas.
