@@ -417,3 +417,5 @@ En rubylibdir encontraras programas escritos en Ruby. Almacenan librerias estand
 - fileustils.rb - Utilidades para manipular archivos de forma fácil desde programas de Ruby.
 - tempfile.rb - Mecanismos automáticos para la creación de archivos temporales.
 - benchmark.rb - Una librería que mide el rendimiento de programas.
+
+La mayoría de los programadores solo utilizan un subconjunto de estas librerias, pero incluso una fracción de esta colección tan grande de bibliotecas de programación ofrece mucho con lo que trabajar.
