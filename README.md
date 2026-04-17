@@ -419,3 +419,7 @@ En rubylibdir encontraras programas escritos en Ruby. Almacenan librerias estand
 - benchmark.rb - Una librería que mide el rendimiento de programas.
 
 La mayoría de los programadores solo utilizan un subconjunto de estas librerias, pero incluso una fracción de esta colección tan grande de bibliotecas de programación ofrece mucho con lo que trabajar.
+
+### 1.2.2 El directorio de extensiones C (RbConfig::CONFIG[“archdir”])
+
+Generalmente ubicado un nivel por debajo de rubylibdir, `archdir` contiene extensiones y bibliotecas específicas de la arquitectura. Los archivos en este directorio suelen tener nombres que terminan en .so, .dll o .bundle (según el hardware y el sistema operativo).
