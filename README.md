@@ -427,3 +427,7 @@ Generalmente ubicado un nivel por debajo de rubylibdir, `archdir` contiene exten
 ### 1.2.3 The site_ruby (RbConfig::CONFIG[“sitedir”]) and vendor_ruby (RbConfig::CONFIG[“vendordir”]) directories
 
 Tu instalación de Ruby incluye un subdirectorio llamado site_ruby, donde tú o tu administrador de sistema podéis almacenar extensiones y bibliotecas de terceros. Algunas de ellas pueden ser código que tú mismo escribas, y otras serán herramientas que descargues de sitios web de terceros y de archivos de bibliotecas de Ruby.
+
+### 1.2.4 Gemas de Ruby y directorio de gemas
+
+La herramienta RubyGems es la forma estándar de empaquetar y distribuir las librerías de Ruby.
