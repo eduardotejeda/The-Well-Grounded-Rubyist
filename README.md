@@ -423,3 +423,7 @@ La mayoría de los programadores solo utilizan un subconjunto de estas librerias
 ### 1.2.2 El directorio de extensiones C (RbConfig::CONFIG[“archdir”])
 
 Generalmente ubicado un nivel por debajo de rubylibdir, `archdir` contiene extensiones y bibliotecas específicas de la arquitectura. Los archivos en este directorio suelen tener nombres que terminan en .so, .dll o .bundle (según el hardware y el sistema operativo).
+
+### 1.2.3 The site_ruby (RbConfig::CONFIG[“sitedir”]) and vendor_ruby (RbConfig::CONFIG[“vendordir”]) directories
+
+Tu instalación de Ruby incluye un subdirectorio llamado site_ruby, donde tú o tu administrador de sistema podéis almacenar extensiones y bibliotecas de terceros. Algunas de ellas pueden ser código que tú mismo escribas, y otras serán herramientas que descargues de sitios web de terceros y de archivos de bibliotecas de Ruby.
