@@ -430,4 +430,19 @@ Tu instalación de Ruby incluye un subdirectorio llamado site_ruby, donde tú o 
 
 ### 1.2.4 Gemas de Ruby y directorio de gemas
 
-La herramienta RubyGems es la forma estándar de empaquetar y distribuir las librerías de Ruby.
+La herramienta RubyGems es la forma estándar de empaquetar y distribuir las librerías de Ruby. Durante la instalación de Ruby, algunas gemas vienen preinstaladas:
+
+-did_you_mean
+-minitest
+-net-telnet
+-power_assert
+-rake
+-rdoc
+-test-unit
+-xmlrpc
+
+Cuando se instalan gemas, usualmente quedan en el mismo nivel que `site_ruby`.
+
+### Trabajando con varias versiones de Ruby
+
+El lenguaje de programación de Ruby es constantemente actualizado y mantenido. Diferentes proyectos requieren diferentes versiones. Por eso se crearon controles de versiones: RVM, rbenv y chruby son los más populares; hacen que usar versiones de Ruby sea fácil. 
