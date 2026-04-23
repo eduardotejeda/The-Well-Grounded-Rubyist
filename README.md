@@ -445,16 +445,32 @@ Cuando se instalan gemas, usualmente quedan en el mismo nivel que `site_ruby`.
 
 ### Trabajando con varias versiones de Ruby
 
-El lenguaje de programación de Ruby es constantemente actualizado y mantenido. Diferentes proyectos requieren diferentes versiones. Por eso se crearon controles de versiones: RVM, rbenv y chruby son los más populares; hacen que usar versiones de Ruby sea fácil. 
+El lenguaje de programación de Ruby es constantemente actualizado y mantenido. Diferentes proyectos requieren diferentes versiones. Por eso se crearon controles de versiones: RVM, rbenv y chruby son los más populares; hacen que usar versiones de Ruby sea fácil.
 
 ## 1.3 Extensiones de Ruby y programando librarias
 
 Esta sección explica como funcionan las extensiones.
 
-La clave para utilizar librerias y extensiones es el metodo `require` y su hermano `load`. 
+La clave para utilizar librerias y extensiones es el metodo `require` y su hermano `load`.
 
 Estos métodos permiten cargar extensiones en tiempo de ejecución, incluidas las que usted mismo escriba. Los analizaremos individualmente y luego ampliaremos nuestro análisis para incluir su uso en la carga de extensiones integradas.
 
 ### 1.3.1 Cargando archivos externos y librerias
 
 Almacenar un programa en un solo archivo puede ser práctico, pero se convierte en un inconveniente en lugar de una ventaja cuando tienes cientos o miles —o incluso cientos de miles— de líneas de código. En algún momento, dividir el programa en archivos separados empieza a tener mucho sentido. Ruby facilita este proceso con los métodos `require` y `load`. Empezaremos con `load`, que es el más sencillo de los dos.
+
+El siguiente ejemplo divide un programa en dos archivos. Debe contener este código:
+
+```
+puts "This it the first (master) program file."
+load "loadee.rb"
+puts "And back again to the first file."
+```
+
+Cuando Ruby lee el método "load", carga ese archivo. Debe contener:
+
+```
+puts "> This it the second file."
+
+Esos dos archivos deben estar en el mismo directorio.
+```
