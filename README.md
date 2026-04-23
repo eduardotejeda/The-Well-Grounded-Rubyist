@@ -487,4 +487,19 @@ Si el archivo que estás cargando se encuentra en tu directorio de trabajo actua
 
 La ruta de carga del intérprete de Ruby es una lista de directorios donde busca los archivos que le solicitas cargar.
 
-Puedes ver los nombres de estos directorios examinando el contenido de la variable global especial $: (dos puntos y dólar). Lo que ves depende de la plataforma que estés utilizando. Una inspección típica de la ruta de carga en Ubuntu 18 se ve así (un ejemplo que incluye el directorio .rubies, donde la utilidad de gestión de versiones de Ruby, chruby, almacena una selección de versiones de Ruby):
+Puedes ver los nombres de estos directorios examinando el contenido de la variable global especial $: (dólar y dos puntos). Lo que ves depende de la plataforma que estés utilizando. Una inspección típica de la ruta de carga en Ubuntu 18 se ve así (un ejemplo que incluye el directorio .rubies, donde la utilidad de gestión de versiones de Ruby, chruby, almacena una selección de versiones de Ruby):
+
+```
+$ ruby -e 'puts $:' ----> la -e indica al interprete que es un script en línea
+
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-
+1.2.0/lib
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/site_ruby/2.5.0
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/site_ruby/2.5.0/x86_64-linux
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/site_ruby
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/vendor_ruby/2.5.0
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/vendor_ruby/2.5.0/x86_64-linux
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/vendor_ruby
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/2.5.0
+/home/jleo3/.rubies/ruby-2.5.1/lib/ruby/2.5.0/x86_64-linux
+```
