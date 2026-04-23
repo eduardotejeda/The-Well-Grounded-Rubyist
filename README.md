@@ -503,3 +503,19 @@ $ ruby -e 'puts $:' ----> la -e indica al interprete que es un script en línea
 /home/jleo3/.rubies/ruby-2.5.1/lib/ruby/2.5.0
 /home/jleo3/.rubies/ruby-2.5.1/lib/ruby/2.5.0/x86_64-linux
 ```
+
+Puedes navegar por directorios relativos en tus comandos de carga con el símbolo convencional de doble punto para subir de directorio:
+
+```
+load "../extras.rb"
+```
+
+También puedes forzar a load a encontrar un archivo, independientemente del contenido de la ruta de carga, proporcionándole la ruta completa:
+
+```
+load "/home/users/dblack/book/code/loadee.rb"
+```
+
+El otro método de carga de archivos, `require`, también busca en los directorios que se encuentran en la ruta de carga predeterminada. Sin embargo, `require` tiene algunas características que `load` no tiene.
+
+### 1.3.3 Cómo usar `require` para una característica
