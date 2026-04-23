@@ -471,6 +471,20 @@ Cuando Ruby lee el método "load", carga ese archivo. Debe contener:
 
 ```
 puts "> This it the second file."
-
-Esos dos archivos deben estar en el mismo directorio.
 ```
+
+Esos dos archivos deben estar en el mismo directorio. El resultado debe ser así:
+
+```
+This it the first (master) program file.
+> This it the second file.
+And back again to the first file.
+```
+
+Si el archivo que estás cargando se encuentra en tu directorio de trabajo actual, Ruby podrá encontrarlo por su nombre. Si no es así, Ruby lo buscará en la ruta de carga.
+
+### 1.3.2 Cargando un archivo en la ruta de carga predeterminada
+
+La ruta de carga del intérprete de Ruby es una lista de directorios donde busca los archivos que le solicitas cargar.
+
+Puedes ver los nombres de estos directorios examinando el contenido de la variable global especial $: (dos puntos y dólar). Lo que ves depende de la plataforma que estés utilizando. Una inspección típica de la ruta de carga en Ubuntu 18 se ve así (un ejemplo que incluye el directorio .rubies, donde la utilidad de gestión de versiones de Ruby, chruby, almacena una selección de versiones de Ruby):
