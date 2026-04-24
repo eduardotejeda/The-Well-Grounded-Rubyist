@@ -519,3 +519,28 @@ load "/home/users/dblack/book/code/loadee.rb"
 El otro método de carga de archivos, `require`, también busca en los directorios que se encuentran en la ruta de carga predeterminada. Sin embargo, `require` tiene algunas características que `load` no tiene.
 
 ### 1.3.3 Cómo usar `require` para una característica
+
+Una diferencia importante entre `load` y `require` es que `require`, si se llama más de una vez con los mismos argumentos, no vuelve a cargar los archivos que ya ha cargado. Ruby lleva un registro de los archivos que has cargado y evita duplicar el esfuerzo.
+
+`require` es más abstracto que `load`. Estrictamente hablando, no se carga un archivo, sino una funcionalidad. Y normalmente, se hace sin siquiera especificar la extensión del nombre del archivo. Para ver cómo funciona, cambia esta línea en `loaddemo.rb`:
+
+`load "loadee.rb"`
+
+por esta:
+
+`require "./loadee"`
+
+Al ejecutar `loaddemo.rb`, obtienes el mismo resultado que antes, aunque no hayas proporcionado el nombre completo del archivo que quieres cargar.
+
+### 1.3.4 require_relative
+
+La tercera forma de cargar un archivoes: `require_relative`. Este comando carga las funciones buscando en relación con el directorio donde se encuentra el archivo desde el que se llama.
+
+Por lo tanto, en el ejemplo anterior, podrías hacer esto:
+
+`require_relative "loadee"`
+
+sin modificar la ruta de carga para incluir el directorio actual. require_relative
+es útil cuando quieres navegar por una jerarquía de directorios local, como esta:
+
+`require_relative "lib/music/sonata"`
