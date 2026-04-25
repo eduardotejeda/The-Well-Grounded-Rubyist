@@ -544,3 +544,53 @@ sin modificar la ruta de carga para incluir el directorio actual. require_relati
 es útil cuando quieres navegar por una jerarquía de directorios local, como esta:
 
 `require_relative "lib/music/sonata"`
+
+## 1.4 Herramientas y aplicaciones Ruby listas para usar
+
+Al instalar Ruby, se incluyen varias herramientas importantes de línea de comandos, que se instalan en el directorio configurado como `bindir`. (Puedes usar `require "rbconfig"` y consultar `Rb-Config::CONFIG["bindir"]` para comprobarlo). Estas son las herramientas:
+
+- ruby: el intérprete
+- irb: el intérprete interactivo de Ruby
+- rdoc y ri: herramientas de documentación de Ruby
+- rake: Ruby make, una utilidad de gestión de tareas
+- gem: una utilidad de gestión de paquetes de bibliotecas y aplicaciones de Ruby
+- erb: un sistema de plantillas
+
+### 1.4.1 Opciones de línea de comandos del intérprete
+
+Al iniciar el intérprete de Ruby desde la línea de comandos, puede proporcionar no solo el nombre de un archivo de programa, sino también una o más opciones de línea de comandos.
+
+Las opciones que elija le indican al intérprete que se comporte de maneras específicas o que realice acciones concretas. Ruby cuenta con más de 20 opciones de línea de comandos.
+
+La Tabla 1.6 resume las más utilizadas.
+
+| Interruptor |                 Descripción                  |           Ejemplo            |
+| :---------: | :------------------------------------------: | :--------------------------: |
+|     -c      |   Revisa sintaxis sin ejecutar el programa   |        ruby -c c2f.rb        |
+|     -w      | Da alertar durante la ejecucion del programa |        ruby -w c2f.rb        |
+|     -e      |       Ejecuta el codigo entre comillas       | ruby -e 'puts "Code demo!"'  |
+|     -l      | Modo linea: imprime un linea en cada salida  | ruby -le 'print "+ newline"' |
+|   -rname    |            Require el nombre modo            |        ruby -rprofile        |
+|     -v      |  Muestra la version de Ruby y modo verbose   |           ruby -v            |
+| - -version  |     Muestra Ruby informacion de version      |        ruby --version        |
+|     -h      |      Muestra ayuda en linea de comando       |           ruby -h            |
+
+COMPROBAR SINTAXIS (-c)
+
+El parámetro -c le indica a Ruby que compruebe la sintaxis del código en uno o más archivos
+sin ejecutarlo. Generalmente se usa junto con el parámetro -w.
+
+ACTIVAR ADVERTENCIAS (-w)
+
+Ejecutar el programa con -w hace que el intérprete se ejecute en modo de advertencias. Esto
+significa que verá más advertencias en pantalla de lo habitual, lo que llamará su atención sobre las partes del programa que, aunque no sean errores de sintaxis, resultan estilística o lógicamente sospechosas. Es la forma que tiene Ruby de decir: «Lo que has hecho es
+sintácticamente correcto, pero es extraño. ¿Estás seguro de que querías hacer eso?». Incluso sin este parámetro, Ruby emite ciertas advertencias, pero menos que en el modo de advertencias completo.
+
+EJECUTAR SCRIPT LITERAL (-e)
+El modificador -e le indica al intérprete que la línea de comandos incluye código Ruby entre comillas, y que debe ejecutar ese código en lugar del código
+contenido en un archivo. Esto puede ser útil para tareas de scripting rápidas donde escribir el código en un archivo y ejecutar Ruby sobre él no compensa.
+
+```
+$ ruby -e "puts 'David A. Black'.reverse"
+kcalB .A divaD
+```
