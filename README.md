@@ -633,3 +633,7 @@ $ ruby ​​-cw nombre_archivo
 ```
 
 Otra combinación de opciones que verás a menudo es -v y -e, que muestra la versión de Ruby que estás utilizando y luego ejecuta el código entre comillas.
+
+### 1.4.2 Una mirada profunda al intérprete de Ruby irb
+
+El intérprete interactivo de Ruby (irb) significa que, en vez de interpretar un archivo, procesa lo que escribes durante la sesión. Sirve para probar código de Ruby y para practicar.
