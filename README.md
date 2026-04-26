@@ -594,3 +594,5 @@ contenido en un archivo. Esto puede ser útil para tareas de scripting rápidas 
 $ ruby -e "puts 'David A. Black'.reverse"
 kcalB .A divaD
 ```
+
+Si desea pasar un programa con más de una línea al parámetro -e, puede usar saltos de línea literales o separar las líneas con punto y coma.
