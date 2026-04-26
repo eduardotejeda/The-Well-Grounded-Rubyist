@@ -596,3 +596,40 @@ kcalB .A divaD
 ```
 
 Si desea pasar un programa con más de una línea al parámetro -e, puede usar saltos de línea literales o separar las líneas con punto y coma.
+
+EJECUTAR EN MODO LÍNEA (-l)
+El modificador -l hace que cada cadena de texto generada por el programa se coloque en una línea independiente, incluso si normalmente no lo haría.
+
+REQUERIR ARCHIVO O EXTENSIÓN CON NOMBRE (-rname)
+El modificador -r llama a `require` en su argumento; `ruby -rscanf` requerirá `scanf` cuando se inicie el intérprete. Puede incluir más de un modificador -r en una misma línea de comandos.
+
+EJECUTAR EN MODO DETALLADO (-v, --verbose)
+Ejecutar con -v tiene dos efectos: muestra información sobre la versión de Ruby que está utilizando y activa el mismo mecanismo de advertencia que el modificador -w.
+El uso más común de -v es para averiguar el número de versión de Ruby:
+
+```
+$ ruby ​​-v
+ruby 2.5.1p57 (2018-03-29 revisión 63029) [x86_64-linux]
+```
+
+IMPRIMIR VERSIÓN DE RUBY (--version)
+La opción --version hace que Ruby imprima una cadena con información de la versión y luego finalice.
+
+No ejecuta ningún código, incluso si se proporciona código o un nombre de archivo. Recordará que -v imprime la información de la versión y luego ejecuta el código (si lo hay) en modo detallado.
+
+Podríamos decir que -v representa tanto la versión como el modo detallado, mientras que --version solo indica la versión.
+
+IMPRIMIR INFORMACIÓN DE AYUDA (-h, --help)
+Las opciones -h y --help muestran una tabla con todas las opciones de línea de comandos disponibles y un resumen de su función.
+
+COMBINACIÓN DE OPCIONES (-CW)
+Además de usar opciones individuales, también puede combinar dos o más en una sola
+invocación de Ruby.
+
+Ya has visto la combinación -cw, que comprueba la sintaxis del archivo sin ejecutarlo, a la vez que muestra advertencias:
+
+```
+$ ruby ​​-cw nombre_archivo
+```
+
+Otra combinación de opciones que verás a menudo es -v y -e, que muestra la versión de Ruby que estás utilizando y luego ejecuta el código entre comillas.
