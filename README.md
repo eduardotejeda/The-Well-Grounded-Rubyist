@@ -637,3 +637,73 @@ Otra combinación de opciones que verás a menudo es -v y -e, que muestra la ver
 ### 1.4.2 Una mirada profunda al intérprete de Ruby irb
 
 El intérprete interactivo de Ruby (irb) significa que, en vez de interpretar un archivo, procesa lo que escribes durante la sesión. Sirve para probar código de Ruby y para practicar.
+
+irb procesa cualquier instrucción Ruby que introduzcas. Por ejemplo, si quieres asignar el número de días, horas y minutos a variables y luego multiplicar esas variables, puedes hacerlo en irb:
+
+```
+>> días = 365
+=> 365
+>> horas = 24
+=> 24
+>> minutos = 60
+=> 60
+>> días * horas * minutos
+=> 525600
+```
+
+La expresión `days = 365` es una expresión de asignación: se asigna el valor 365 a una variable llamada `days`.
+
+La función principal de una expresión de asignación es asignar un valor a una variable para poder usarla posteriormente. Sin embargo, la expresión de asignación (la línea completa days = 365) tiene un valor. El valor de una expresión de asignación es su lado derecho. Cuando irb encuentra una expresión, imprime su valor. Por lo tanto, cuando irb encuentra days = 365, imprime 365. Esto puede parecer una impresión excesiva, pero es normal; es el mismo comportamiento que permite escribir 2 + 2 en irb y ver el resultado sin necesidad de usar una instrucción print explícita.
+
+Interrumpir irb
+Es posible quedarse atascado en un bucle en irb, o que la sesión parezca no responder (lo que suele significar que has escrito una comilla de apertura pero no una de cierre, o algo similar). La forma de recuperar el control depende en parte del sistema. En la mayoría de los sistemas, Ctrl+C funciona. En otros, puede que necesites usar Ctrl+Z.
+
+### 1.4.3 La utilidad de gestión de tareas rake
+
+Como su nombre indica (proviene de “Ruby make”), `rake` es una utilidad de gestión de tareas inspirada en make.
+
+Fue escrita por el fallecido Jim Weirich. Al igual que make, rake lee y ejecuta las tareas definidas en un archivo: un Rakefile. Sin embargo, a diferencia de make, rake utiliza la sintaxis de Ruby para definir sus tareas.
+
+El listado 1.5 muestra un Rakefile. Crea un archivo llamado “Rakefile” y añade el código del listado.
+
+Luego, ejecuta este comando en la línea de comandos:
+
+```
+$ rake admin:clean_tmp
+```
+
+rake ejecuta la tarea clean_tmp definida dentro del espacio de nombres admin.
+
+## 1.5 Rakefile
+
+```
+namespace :admin do
+desc "Interactively delete all files in /tmp"
+task :clean_tmp do
+Dir["/tmp/*"].each do |f| ===========> 1
+next unless File.file?(f) ===========> 2
+print "Delete #{f}? " ===============> 3
+answer = $stdin.gets
+case answer
+when /^y/
+File.unlink(f) ======================> 4
+when /^q/
+break ===============================> 5
+end
+end
+end
+end
+```
+
+La tarea de rake que se define aquí utiliza varias técnicas de Ruby que aún no has visto,
+pero el algoritmo básico es bastante simple:
+
+1. Recorre cada archivo en el directorio /tmp.
+2. Omite la iteración actual del bucle a menos que esta entrada sea un archivo. Ten en cuenta que los archivos ocultos tampoco se eliminan, ya que la operación de listar el directorio no los incluye.
+3. Solicita la eliminación del archivo mediante interpolación de cadenas.
+   Aprenderás más sobre la interpolación de cadenas en la sección 2.2.3.
+
+4. Si el usuario escribe "y" (o cualquier cosa que comience con "y"), elimina el archivo.
+5. Si el usuario escribe "q", sal del bucle; la tarea se detiene.
+
+La lógica de programación principal proviene del recorrido de la lista de entradas del directorio (consulta el recuadro "Uso de `each` para recorrer una colección") y de la instrucción `case`, una estructura de ejecución condicional. Verás estas dos técnicas en detalle en el capítulo 6.
