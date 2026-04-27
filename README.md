@@ -710,7 +710,8 @@ La lógica de programación principal proviene del recorrido de la lista de entr
 
 Puedes usar los nombres que quieras para tus espacios de nombres y tareas de Rake. Ni siquiera necesitas un espacio de nombres; puedes definir una tarea en el espacio de nombres de nivel superior:
 
-```task :clean_tmp do
+```
+task :clean_tmp do
 # etc.
 end
 ```
