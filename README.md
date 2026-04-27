@@ -735,3 +735,11 @@ end
 La tarea definida aquí se invoca así:
 
 `$ rake admin:clean:tmp`
+
+### 1.4.4 Instalación de paquetes con el comando gem
+
+La libreria RubyGems falicita la instalacion de librerias y aplicaciones.
+
+Instalar una gema de Ruby puede ser, y generalmente lo es, tan fácil como ejecutar un simple comando de instalación:
+
+`$ gem install prawn`
