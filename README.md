@@ -707,3 +707,30 @@ pero el algoritmo básico es bastante simple:
 5. Si el usuario escribe "q", sal del bucle; la tarea se detiene.
 
 La lógica de programación principal proviene del recorrido de la lista de entradas del directorio (consulta el recuadro "Uso de `each` para recorrer una colección") y de la instrucción `case`, una estructura de ejecución condicional. Verás estas dos técnicas en detalle en el capítulo 6.
+
+Puedes usar los nombres que quieras para tus espacios de nombres y tareas de Rake. Ni siquiera necesitas un espacio de nombres; puedes definir una tarea en el espacio de nombres de nivel superior:
+
+```task :clean_tmp do
+# etc.
+end
+```
+
+y luego invocarla usando el nombre simple:
+
+`$ rake clean_tmp`
+
+Pero usar espacios de nombres para tus tareas es una buena idea, especialmente si el número de tareas que defines aumenta significativamente. Puedes usar espacios de nombres a cualquier nivel; esta estructura, por ejemplo, es válida:
+
+```
+namespace :admin do
+namespace :clean do
+task :tmp do
+# etc.
+end
+end
+end
+```
+
+La tarea definida aquí se invoca así:
+
+`$ rake admin:clean:tmp`

@@ -14,3 +14,8 @@ end
 end
 end
 end
+
+desc "Greet the world"
+task :saludar do
+  puts "¡Hola, mundo desde Rake! 👋"
+end
