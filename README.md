@@ -743,3 +743,5 @@ La libreria RubyGems falicita la instalacion de librerias y aplicaciones.
 Instalar una gema de Ruby puede ser, y generalmente lo es, tan fácil como ejecutar un simple comando de instalación:
 
 `$ gem install prawn`
+
+Una vez que hayas instalado una gema, podrás usarla mediante el método `require`.
