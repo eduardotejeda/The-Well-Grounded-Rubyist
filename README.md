@@ -749,7 +749,7 @@ en el directorio actual y en la caché local del sistema RubyGems.
 
 Las instalaciones locales siguen buscando dependencias de forma remota, a menos que uses la opción `-l` (local) en la línea de comandos `gem`. Esta opción restringe todas las operaciones al dominio local. Si solo quieres instalar gemas remotas, incluyendo sus dependencias, puedes usar la opción `-r` (remota). En la mayoría de los casos, el comando `gem install nombre_de_la_gema` te dará lo que necesitas. (Para desinstalar una gema, usa el comando `gem uninstall nombre_de_la_gema`).
 
-Una vez que hayas instalado una gema, podrás usarla mediante el método `require`.
+Una vez que hayas instalado una gema, podrás usarla mediante el método `require`. Prueba
 
 ## Capítulo 2: Objetos, metodos y variables locales
 
