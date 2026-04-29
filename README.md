@@ -753,4 +753,11 @@ Una vez que hayas instalado una gema, podrás usarla mediante el método `requir
 
 ## Capítulo 2: Objetos, metodos y variables locales
 
+- Objetos y orientación a objetos
+- Capacidades innatas frente a capacidades aprendidas de los objetos
+- Sintaxis de parámetros, argumentos y llamadas a métodos
+- Asignación y uso de variables locales
+- Referencias a objetos
+
 ## 2.1 Hablando con objetos
+
