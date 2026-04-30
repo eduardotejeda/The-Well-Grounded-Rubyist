@@ -761,3 +761,8 @@ Una vez que hayas instalado una gema, podrás usarla mediante el método `requir
 
 ## 2.1 Hablando con objetos
 
+En cualquier programa Ruby, la mayor parte del diseño, la lógica y la acción giran en torno a los objetos. Al escribir programas Ruby, las actividades principales consisten en crear objetos, dotarlos de capacidades y pedirles que realicen acciones.
+
+Los objetos son tu control sobre el universo de tu programa. Cuando quieres que se realice algo —un cálculo, una operación de salida, una comparación de datos—, se le pide a un objeto que lo haga. En lugar de preguntar en abstracto si a es igual a b, le preguntas a a si se considera igual a b. Si quieres saber si un estudiante está cursando una clase con un profesor determinado, le preguntas al estudiante: "¿Eres estudiante de este profesor?". La forma exacta en que se desarrolla este tipo de consulta, en términos de estructuras de datos y sintaxis, depende de las características específicas del diseño de tu programa.
+
+Pero, en general, escribir un programa Ruby es, en gran medida, una cuestión de diseñar tus objetos de manera que cada uno desempeñe un papel claro y pueda realizar acciones relacionadas con ese papel.
