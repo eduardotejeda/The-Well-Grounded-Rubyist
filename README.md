@@ -767,6 +767,12 @@ Los objetos son tu control sobre el universo de tu programa. Cuando quieres que 
 
 Pero, en general, escribir un programa Ruby es, en gran medida, una cuestión de diseñar tus objetos de manera que cada uno desempeñe un papel claro y pueda realizar acciones relacionadas con ese papel.
 
-2.1.1 Ruby y la orientación del objeto
+### 2.1.1 Ruby y la orientación del objeto
 
 Ruby llega a la idea de manipular datos a través de objetos mediante el principio de diseño de lenguajes de programación orientado a objetos.
+
+En la programación orientada a objetos (POO), se realizan cálculos, manipulación de datos y operaciones de entrada/salida mediante la creación de objetos y solicitando que realicen acciones y proporcionen información.
+
+En la mayoría de los lenguajes orientados a objetos, incluido Ruby, cada objeto es un ejemplo o instancia de una clase particular, y el comportamiento de los objetos individuales está determinado, al menos en cierta medida, por las definiciones de métodos presentes en la clase del objeto.
+
+### 2.1.2 Creando un objeto generico
