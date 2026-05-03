@@ -776,3 +776,5 @@ En la programación orientada a objetos (POO), se realizan cálculos, manipulaci
 En la mayoría de los lenguajes orientados a objetos, incluido Ruby, cada objeto es un ejemplo o instancia de una clase particular, y el comportamiento de los objetos individuales está determinado, al menos en cierta medida, por las definiciones de métodos presentes en la clase del objeto.
 
 ### 2.1.2 Creando un objeto generico
+
+Al principio, el concepto de POO suele parecer simple (escribes programas que tienen libros, botellas, coches y casas, y orquestas una especie de conversación entre ellos) y abstracto (¿Objeto? ¿Qué significa eso? ¿Qué debo escribir en mi archivo de programa para crear un objeto "casa"?). La POO tiene un componente de simplicidad; permite usar objetos, entidades, roles y comportamientos como base para diseñar los programas, lo cual puede ser útil. Sin embargo, para crear y usar objetos en los programas, es necesario aprender cómo se hace en el lenguaje de programación específico.
