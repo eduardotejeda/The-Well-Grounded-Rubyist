@@ -806,3 +806,5 @@ Así se define el método `talk` para el objeto `obj`:
 
 La Figura 2.1 muestra un análisis de la definición del método anterior. Ahora `obj` sabe cómo
 hablar, y puedes pedírselo.
+
+![Ejemplo 2.1](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/Ejemplo%202.1.jpg)
