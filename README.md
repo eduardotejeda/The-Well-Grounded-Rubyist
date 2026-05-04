@@ -779,6 +779,8 @@ En la mayoría de los lenguajes orientados a objetos, incluido Ruby, cada objeto
 
 Al principio, el concepto de POO suele parecer simple (escribes programas que tienen libros, botellas, coches y casas, y orquestas una especie de conversación entre ellos) y abstracto (¿Objeto? ¿Qué significa eso? ¿Qué debo escribir en mi archivo de programa para crear un objeto "casa"?). La POO tiene un componente de simplicidad; permite usar objetos, entidades, roles y comportamientos como base para diseñar los programas, lo cual puede ser útil. Sin embargo, para crear y usar objetos en los programas, es necesario aprender cómo se hace en el lenguaje de programación específico.
 
+NOTA: Ruby se diferencia de otros lenguajes orientados a objetos en que: cada objeto tiene el potencial de «aprender» comportamientos (métodos) que su clase no le enseñó. El concepto de clase se sitúa por encima del concepto de objeto, y no al revés.
+
 Ver una explicación de la POO específica para cada lenguaje puede facilitar la comprensión de las partes abstractas.
 
 Por lo tanto, procederemos con un código Ruby. Crearemos un nuevo objeto.
@@ -786,3 +788,21 @@ Por lo tanto, procederemos con un código Ruby. Crearemos un nuevo objeto.
 No representará ni modelará nada específico, como una casa, un libro o un profesor; será un objeto genérico:
 
 `obj = Object.new`
+
+DEFINIENDO EL COMPORTAMIENTO DE UN OBJETO
+
+Supongamos que has creado un objeto y quieres que haga algo interesante: quieres que hable. Para que hable, tienes que pedírselo. Pero antes de pedírselo, tienes que enseñarle a hablar.
+
+En concreto, y de forma más técnica, tienes que definir un método para tu objeto.
+
+Esto se hace usando un término especial: una palabra clave, concretamente, la palabra clave `def`.
+
+Así se define el método `talk` para el objeto `obj`:
+
+`def obj.talk`
+`puts "Soy un objeto."`
+`puts "(¿Te molesta?)"`
+`end`
+
+La Figura 2.1 muestra un análisis de la definición del método anterior. Ahora `obj` sabe cómo
+hablar, y puedes pedírselo.
