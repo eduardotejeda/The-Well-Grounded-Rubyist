@@ -778,3 +778,11 @@ En la mayoría de los lenguajes orientados a objetos, incluido Ruby, cada objeto
 ### 2.1.2 Creando un objeto generico
 
 Al principio, el concepto de POO suele parecer simple (escribes programas que tienen libros, botellas, coches y casas, y orquestas una especie de conversación entre ellos) y abstracto (¿Objeto? ¿Qué significa eso? ¿Qué debo escribir en mi archivo de programa para crear un objeto "casa"?). La POO tiene un componente de simplicidad; permite usar objetos, entidades, roles y comportamientos como base para diseñar los programas, lo cual puede ser útil. Sin embargo, para crear y usar objetos en los programas, es necesario aprender cómo se hace en el lenguaje de programación específico.
+
+Ver una explicación de la POO específica para cada lenguaje puede facilitar la comprensión de las partes abstractas.
+
+Por lo tanto, procederemos con un código Ruby. Crearemos un nuevo objeto.
+
+No representará ni modelará nada específico, como una casa, un libro o un profesor; será un objeto genérico:
+
+`obj = Object.new`
