@@ -799,12 +799,104 @@ Esto se hace usando un término especial: una palabra clave, concretamente, la p
 
 Así se define el método `talk` para el objeto `obj`:
 
-`def obj.talk`
-`puts "Soy un objeto."`
-`puts "(¿Te molesta?)"`
-`end`
+```
+def obj.talk
+puts "Soy un objeto."
+puts "(¿Te molesta?)"
+end
+```
 
 La Figura 2.1 muestra un análisis de la definición del método anterior. Ahora `obj` sabe cómo
 hablar, y puedes pedírselo.
 
 ![Ejemplo 2.1](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/Ejemplo%202.1.jpg)
+
+ENVIAR MENSAJES A OBJETOS
+
+Para pedirle a obj que hable, usa la sintaxis de envío de mensajes o llamada a métodos que viste en el capítulo 1:
+
+`obj.talk`
+
+Y habla:
+
+```
+Soy un objeto.
+(¿Te molesta?)
+```
+
+El objeto obj entiende, o responde, al mensaje talk. Se dice que un objeto responde a un mensaje si tiene un método definido cuyo nombre corresponde a el mensaje.
+
+Algunos aspectos a considerar sobre la sintaxis de envío de mensajes basada en puntos:
+
+- El punto (.) es el operador de envío de mensajes. El mensaje de la derecha se envía
+  al objeto (o receptor, como se le suele llamar en este contexto) de la izquierda.
+
+- El receptor puede estar representado, y a menudo lo está, por una variable que sustituye a un objeto. Pero un receptor también puede ser una construcción literal de objeto; por ejemplo, una cadena entre comillas.
+
+- En la práctica, el mensaje que se envía es casi siempre el nombre de un método (como
+  `talk`, el método definido anteriormente). El objeto siempre intenta actuar bajo la suposición de que el mensaje es el nombre de un método. Si no existe ningún método con ese
+  nombre, se toman medidas de manejo de errores.
+
+La semántica de las llamadas a métodos permite ir más allá del caso relativamente unidimensional de `talk`, especialmente cuando se empiezan a llamar métodos con argumentos.
+
+### 2.1.3 Métodos que aceptan argumentos
+
+Los métodos en Ruby son muy parecidos a las funciones matemáticas: se introduce un dato,
+se ejecuta el proceso y se obtiene un resultado. Para pasar un dato a un método de Ruby, se llama al método con uno o más argumentos.
+
+En la definición de un método, se indican los argumentos mediante una lista de variables entre paréntesis después del nombre del método. (Los argumentos pueden ser obligatorios u opcionales.
+
+Analizaremos los argumentos obligatorios aquí y los opcionales más adelante). Al llamar al método, se proporcionan los valores correspondientes a estas variables.
+
+Más precisamente, las variables que aparecen en la definición del método son los parámetros formales del método, y los valores que se le proporcionan al llamarlo son los argumentos correspondientes. (Es común usar el término «argumentos» informalmente para referirse tanto a los parámetros de un método como a los argumentos de la llamada, pero es útil conocer la distinción técnica).
+
+Supongamos que queremos que nuestro objeto funcione como un conversor de grados Celsius a Fahrenheit. Puedes enseñarle a realizar la conversión definiendo un método:
+
+```
+def obj.c2f(c)
+c * 9.0 / 5 + 32
+end
+```
+
+(En esta ocasión, 9 se ha convertido en 9.0 en la fórmula de conversión. Esto obliga a que el resultado sea un número decimal, que es más preciso que un entero). El método obj.c2f tiene un parámetro formal, lo que significa que acepta un argumento. Al llamar al método,
+le proporcionas un argumento:
+
+`puts obj.c2f(100)`
+
+El resultado es
+
+`212.0`
+
+Como puedes ver, existe una correspondencia directa entre la sintaxis de la lista de parámetros en la definición de un método y la sintaxis de la lista de argumentos cuando se llama al método.
+
+Los paréntesis son opcionales en ambos casos; podrías hacer esto:
+
+`def obj.c2f c`
+
+y esto:
+
+`obj.c2f 100`
+
+Sin embargo, no siempre son opcionales, sobre todo cuando se encadenan varias
+llamadas a métodos, por lo que es recomendable usarlos en lugar de omitirlos.
+
+Puedes hacer una excepción en casos comunes o convencionales donde los paréntesis
+normalmente se omiten, como en las llamadas a `puts`. Pero ante la duda, usa paréntesis.
+
+Otra excepción importante es cuando un método no recibe argumentos. En esta situación, es sintaxis válida de Ruby proporcionar paréntesis vacíos:
+
+```
+def welcome_the_user()
+puts "¡Hola!"
+end
+```
+
+Pero es mucho más común omitirlos:
+
+```
+def welcome_the_user
+puts "¡Hola!"
+end
+```
+
+En el otro extremo del proceso, cada llamada a un método devuelve un valor.
