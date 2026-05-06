@@ -915,3 +915,40 @@ La Tabla 2.1 muestra algunos ejemplos de expresiones y sus valores (junto con co
 |    c = 100    |    100    |                                                         Asignación a una variable.                                                         |
 |  c\*9/5 + 32  |    212    | Se aplican las reglas de precedencia habituales: la multiplicación y la división tienen mayor prioridad que la suma y se realizan primero. |
 | obj.c2f(100)  |    212    |                                                 Una llamada a un método es una expresión.                                                  |
+
+Observa la última entrada de la tabla 2.1: es una llamada a obj.c2f. Cada llamada a un método es una expresión. Al llamar a un método, la llamada se evalúa y devuelve un valor. Este resultado es el valor de retorno del método.
+
+El valor de retorno de cualquier método es el mismo que el valor de la última expresión evaluada durante su ejecución. En el caso del método de conversión de temperatura, la última expresión evaluada es la única línea del cuerpo del método:
+
+`c * 9.0 / 5 + 32`
+
+Por lo tanto, el resultado de este cálculo proporciona el valor de retorno del método.
+Ruby ofrece una palabra clave para especificar explícitamente los valores de retorno: `return`. El uso de esta palabra clave suele ser opcional, pero a veces es útil para explicitar lo que de otro modo sería implícito:
+
+```
+def obj.c2f(c)
+return c * 9.0 / 5 + 32
+end
+```
+
+Esto es equivalente a la versión anterior del método, pero es más expresiva sobre
+lo que hace. Por otro lado, es más extenso. Debes decidir, según tu propio estilo, si quieres usar `return`. Debes usarlo si devuelves varios valores, que se agruparán automáticamente en un array: `return a,b,c` en lugar de solo `a,b,c` (aunque también puedes devolver varios valores en un array explícito, como `[a,b,c]`, sin usar `return`). También debes usar `return` si quieres devolver un valor desde cualquier punto de un método. Pero, uses `return` o no, siempre se devolverá un valor en cada llamada al método. Incluso una llamada a un cuerpo de método vacío, que consiste únicamente en las declaraciones `def` y `end`, devuelve `nil`.
+
+En este punto, el objeto está haciendo lo que necesitamos: escuchar mensajes y
+actuar en consecuencia. Esta es una buena ilustración de cómo funciona Ruby, aunque un poco rudimentaria.
+
+Comenzamos con un objeto genérico y le enseñamos a comunicarse y convertir temperaturas. Esto
+muestra la mecánica de definir y llamar métodos, pero da como resultado un objeto bastante
+extraño. Veamos un objeto que modele algo un poco más estructurado.
+
+Crearemos manualmente un objeto genérico para que comprenda el comportamiento y la lógica de negocio de una entrada para un evento.
+
+## 2.2 Creación de un objeto: el comportamiento de una entrada
+
+Una entrada para un evento es un objeto familiar, con un conjunto conocido de propiedades y comportamientos.
+
+Veamos a grandes rasgos qué esperamos que haga y sepa sobre sí mismo un objeto Ruby similar a una entrada.
+
+### 2.2.1 El objeto entrada: primero el comportamiento
+
+Un objeto entrada debe poder proporcionar datos sobre sí mismo. Debe responder a las solicitudes de información sobre el evento: fecha, lugar, nombre del evento, artista, asiento y precio.
