@@ -902,6 +902,16 @@ end
 En el otro extremo del proceso, cada llamada a un método devuelve un valor.
 
 ### 2.1.4 El valor de retorno de un método
+
 El código Ruby se compone de expresiones, cada una de las cuales se evalúa a un valor específico.
 
 La Tabla 2.1 muestra algunos ejemplos de expresiones y sus valores (junto con comentarios explicativos).
+
+|  Expresiones  |   Valor   |                                                                 Comentario                                                                 |
+| :-----------: | :-------: | :----------------------------------------------------------------------------------------------------------------------------------------: |
+|      2+2      |     4     |                                                           Expresion aritmetica.                                                            |
+|    "Hola"     |  "Hola"   |                                      Una cadena de texto simple y literal (entre comillas) se evalúa.                                      |
+| "Hola" + "tu" | "Hola tu" |                                                          Contatenación de textos.                                                          |
+|    c = 100    |    100    |                                                         Asignación a una variable.                                                         |
+|  c\*9/5 + 32  |    212    | Se aplican las reglas de precedencia habituales: la multiplicación y la división tienen mayor prioridad que la suma y se realizan primero. |
+| obj.c2f(100)  |    212    |                                                 Una llamada a un método es una expresión.                                                  |
