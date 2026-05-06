@@ -900,3 +900,8 @@ end
 ```
 
 En el otro extremo del proceso, cada llamada a un método devuelve un valor.
+
+### 2.1.4 El valor de retorno de un método
+El código Ruby se compone de expresiones, cada una de las cuales se evalúa a un valor específico.
+
+La Tabla 2.1 muestra algunos ejemplos de expresiones y sus valores (junto con comentarios explicativos).
