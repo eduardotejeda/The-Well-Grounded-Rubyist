@@ -952,3 +952,14 @@ Veamos a grandes rasgos qué esperamos que haga y sepa sobre sí mismo un objeto
 ### 2.2.1 El objeto entrada: primero el comportamiento
 
 Un objeto entrada debe poder proporcionar datos sobre sí mismo. Debe responder a las solicitudes de información sobre el evento: fecha, lugar, nombre del evento, artista, asiento y precio.
+
+Cuando se le solicite, la entrada proporcionará la siguiente información, basada en una imagen de una lectura pública realizada por Mark Twain en 1903:
+
+```
+1903-01-02
+Town Hall
+Author's reading
+Mark Twain
+Secon Balcony, row J, seat 12
+$5.50
+```
