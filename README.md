@@ -963,3 +963,32 @@ Mark Twain
 Secon Balcony, row J, seat 12
 $5.50
 ```
+
+CREANDO EL OBJETO TICKET
+
+Creamos un objeto generico:
+
+`ticket = Object.new`
+
+Una vez existente, podemos comenzar a dotar al objeto ticket de propiedades y datos definiendo métodos, cada uno de los cuales devuelve el valor apropiado:
+
+```
+def ticket.date
+"1903-01-02"
+end
+def ticket.venue
+"Town Hall"
+end
+def ticket.event
+"Author's reading"
+end
+def ticket.performer
+"Mark Twain"
+end
+def ticket.seat
+"Second Balcony, row J, seat 12"
+end
+def ticket.price
+5.50
+end
+```
