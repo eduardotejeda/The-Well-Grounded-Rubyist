@@ -992,3 +992,5 @@ def ticket.price
 5.50
 end
 ```
+
+La mayoría de los métodos definidos aquí devuelven valores de cadena. Esto se puede apreciar a simple vista: devuelven un valor entre comillas. El método de `precio` devuelve un número de coma flotante.
