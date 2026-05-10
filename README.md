@@ -994,3 +994,8 @@ end
 ```
 
 La mayoría de los métodos definidos aquí devuelven valores de cadena. Esto se puede apreciar a simple vista: devuelven un valor entre comillas. El método de `precio` devuelve un número de coma flotante.
+
+### 2.2.2 Consulta del objeto ticket
+
+En lugar de generar una lista sin formato de elementos, vamos a generar un resumen legible de
+los detalles del ticket. El uso de print y puts puede ayudar a que la información tenga un formato más o menos narrativo:
