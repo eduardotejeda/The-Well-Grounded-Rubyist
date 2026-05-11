@@ -999,3 +999,15 @@ La mayoría de los métodos definidos aquí devuelven valores de cadena. Esto se
 
 En lugar de generar una lista sin formato de elementos, vamos a generar un resumen legible de
 los detalles del ticket. El uso de print y puts puede ayudar a que la información tenga un formato más o menos narrativo:
+
+Guarda todo el código, comenzando con `ticket = Object.new`, en un archivo llamado `ticket.rb` y ejecuta `Item`. Verás lo siguiente:
+
+```
+This ticket is for: Author's reading, at Town Hall, on 1903-01-02.
+The performer is Mark Twain.
+The seat is Second Balcony, row J, seat 12, and it costs $5.50.
+```
+
+El ticket de Twain es un ejemplo sencillo, pero engloba algunos procedimientos y principios fundamentales de Ruby.
+
+La lección más importante es que el conocimiento necesario para que el programa realice cualquier tarea útil reside en el objeto. El objeto ticket contiene ese conocimiento; se accede a él solicitándoselo mediante llamadas a métodos. Nada es más fundamental en la programación en Ruby que esto. Se trata de pedir a los objetos que realicen acciones y proporcionen información.
