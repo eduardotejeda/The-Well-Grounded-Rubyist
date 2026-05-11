@@ -1011,3 +1011,9 @@ The seat is Second Balcony, row J, seat 12, and it costs $5.50.
 El ticket de Twain es un ejemplo sencillo, pero engloba algunos procedimientos y principios fundamentales de Ruby.
 
 La lección más importante es que el conocimiento necesario para que el programa realice cualquier tarea útil reside en el objeto. El objeto ticket contiene ese conocimiento; se accede a él solicitándoselo mediante llamadas a métodos. Nada es más fundamental en la programación en Ruby que esto. Se trata de pedir a los objetos que realicen acciones y proporcionen información.
+
+### 2.2.3 Acortamiento del código del ticket mediante interpolación de cadenas
+
+Una de las técnicas de programación más útiles en Ruby es la interpolación de cadenas.
+El operador de interpolación de cadenas permite insertar cualquier elemento en una cadena:
+una variable, por ejemplo, o el valor de retorno de un método. Esto puede ahorrarte mucho trabajo de ida y vuelta entre las instrucciones print y put.
