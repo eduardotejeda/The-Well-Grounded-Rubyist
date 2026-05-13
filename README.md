@@ -1017,3 +1017,12 @@ La lección más importante es que el conocimiento necesario para que el program
 Una de las técnicas de programación más útiles en Ruby es la interpolación de cadenas.
 El operador de interpolación de cadenas permite insertar cualquier elemento en una cadena:
 una variable, por ejemplo, o el valor de retorno de un método. Esto puede ahorrarte mucho trabajo de ida y vuelta entre las instrucciones print y put.
+
+Además, las cadenas se pueden concatenar con el signo más (+). Así es como se ve el código de impresión, que utiliza la interpolación de cadenas para insertar los valores de las expresiones en la cadena y la suma de cadenas para consolidar varias llamadas a `puts` en una sola:
+
+```
+puts "This ticket is for: #{ticket.event}, at #{ticket.venue}.\n" +
+"The performer is #{ticket.performer}.\n" +
+"The seat is #{ticket.seat}, " +
+"and it costs $#{"%.2f." % ticket.price}"
+```
