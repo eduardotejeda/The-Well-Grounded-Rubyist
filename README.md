@@ -1027,4 +1027,6 @@ puts "This ticket is for: #{ticket.event}, at #{ticket.venue}.\n" +
 "and it costs $#{"%.2f." % ticket.price}"
 ```
 
-'puys'
+### 2.2.4 Disponibilidad de boletos: expresión de estado booleano en un método
+
+Mediante información booleana, consideremos si un boleto se ha vendido o si aún está disponible. Una forma de dotar a un boleto de información sobre su estado de disponibilidad es la siguiente:
