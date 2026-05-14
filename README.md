@@ -1030,3 +1030,29 @@ puts "This ticket is for: #{ticket.event}, at #{ticket.venue}.\n" +
 ### 2.2.4 Disponibilidad de boletos: expresión de estado booleano en un método
 
 Mediante información booleana, consideremos si un boleto se ha vendido o si aún está disponible. Una forma de dotar a un boleto de información sobre su estado de disponibilidad es la siguiente:
+
+```
+def ticket.availability_status
+"sold"
+end
+```
+
+Otra forma es preguntarle al boleto si está disponible y que responda verdadero o falso:
+
+```
+def ticket.available?
+false
+end
+```
+
+`false` es un término especial en Ruby, al igual que `true`. `true` y `false` son objetos. Ruby los utiliza para representar los resultados de, entre otras cosas, operaciones de comparación (como `x > y`), y puedes usarlos para representar la verdad y la falsedad en tus propios métodos.
+
+Quizás hayas notado que el nombre del método `available?` termina con un signo de interrogación. Ruby te permite hacer esto para que puedas escribir métodos que se evalúen como verdaderos o falsos y que las llamadas a los métodos parezcan preguntas.
+
+```
+if ticket.available?
+puts "You're in luck!"
+else
+puts "Sorry--that seat has been sold."
+end
+```
