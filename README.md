@@ -1056,3 +1056,9 @@ else
 puts "Sorry--that seat has been sold."
 end
 ```
+
+Pero la verdad y la falsedad van más allá de los objetos verdadero y falso. Toda expresión en Ruby se evalúa como un objeto, y todo objeto en Ruby tiene un valor de verdad. El valor de verdad de casi todos los objetos en Ruby es verdadero. Los únicos objetos cuyo valor de verdad (o valor booleano) es falso son el objeto `false` y el objeto especial `nil`, que no es una entidad.
+
+## 2.3 Los comportamientos innatos de un objeto
+
+Incluso un objeto recién creado no es una pizarra en blanco. Tan pronto como un objeto existe, responde a una serie de mensajes. Todo objeto «nace» con ciertas capacidades innatas.
