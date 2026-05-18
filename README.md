@@ -1062,3 +1062,7 @@ Pero la verdad y la falsedad van más allá de los objetos verdadero y falso. To
 ## 2.3 Los comportamientos innatos de un objeto
 
 Incluso un objeto recién creado no es una pizarra en blanco. Tan pronto como un objeto existe, responde a una serie de mensajes. Todo objeto «nace» con ciertas capacidades innatas.
+
+Para ver una lista de métodos innatos, puede llamar al método `methods` (e incluir una operación de ordenación para facilitar la exploración visual):
+
+`p Object.new.methods.sort`
