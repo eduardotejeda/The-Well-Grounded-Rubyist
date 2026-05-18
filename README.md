@@ -1099,4 +1099,51 @@ puts "The id of the string object str is #{str.object_id}."
 puts "And the id of the integer 100 is #{100.object_id}."
 ```
 
+Tener un ID unico es util cuando necesitas diferenciar a dos objetos similares. Pero existen casos donde objetos pueden compartir el mismo ID:
 
+```
+a = Object.new
+b = a
+puts "a's id is #{a.object_id} and b's id is #{b.object_id}."
+```
+
+Un escenario opuesto puede pasar:
+
+```
+string_1 = "Hello"
+string_2 = "Hello"
+puts "string_1's id is #{string_1.object_id}."
+puts "string_2's id is #{string_2.object_id}."
+```
+
+Es como tener dos copias del mismo libro. Son identicos, pero son diferentes.
+
+NÚMEROS DE IDENTIFICACIÓN E IGUALDAD DE OBJETOS
+
+Igual que en las instituciones humanas, el fin de dar a un objeto un ID es poder diferenciarlo de otros objetos.
+
+### 2.3.2 Consultar las capacidades de un objeto con el método respond_to?
+
+Los objetos en Ruby responden a los mensajes. Por ejemplo:
+
+```
+obj = Object.new
+obj.talk
+```
+
+Dare error :
+
+`NoMethodError: undefined method `talk' for #<Object:0x00000102836550>`
+
+Puedes determinar por adelantado si un objeto tiene la capacidad de responder a un mensaje usando el metodo `respond_to?`. Ese metodo existe para todos los objetos y usualmente se usa con la condicional `if`:
+
+```
+obj = Object.new
+if obj.respond_to?("talk")
+obj.talk
+else
+puts "Sorry, el objeto no sabe talk."
+end
+```
+
+`respond_to?` es un ejemplo de introspeccion o refleccion, dos terminos que refieren a analizar un programa miestras corre.
