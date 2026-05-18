@@ -1086,3 +1086,17 @@ El resultado debe ser todos los metodos innatos de ese objeto:
 Objetos genéricos vs. objetos básicos
 
 Pedirle a Ruby que cree un nuevo objeto con el comando `Object.new` produce lo que aquí llamamos, informalmente, un objeto genérico. Ruby también tiene objetos básicos, y ese es un nombre más formal. Si llamas a `BasicObject.new`, obtienes una especie de prototipo de objeto que puede hacer muy poco. Ni siquiera puedes pedirle a un objeto básico que te muestre sus métodos, ¡porque no tiene ningún método `methods`! De hecho, solo tiene ocho métodos: suficientes para que el objeto exista y sea identificable, y poco más.
+
+### 2.3.1 Idenfificar objetos unicos con el metodo object_id
+
+Cada objeto en Ruby es unico, tiene un numero de ID asociado a el. Puedes ver ese numero con con metodo `object_id`:
+
+```
+obj = Object.new
+puts "The id of obj is #{obj.object_id}."
+str = "Strings are objects too, and this is a string!"
+puts "The id of the string object str is #{str.object_id}."
+puts "And the id of the integer 100 is #{100.object_id}."
+```
+
+
