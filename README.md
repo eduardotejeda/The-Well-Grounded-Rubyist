@@ -1066,3 +1066,23 @@ Incluso un objeto recién creado no es una pizarra en blanco. Tan pronto como un
 Para ver una lista de métodos innatos, puede llamar al método `methods` (e incluir una operación de ordenación para facilitar la exploración visual):
 
 `p Object.new.methods.sort`
+
+El resultado debe ser todos los metodos innatos de ese objeto:
+
+```
+[:!, :!=, :!~, :<=>, :==, :===, :=~, :__id__, :__send__, :class, :clone,
+:define_singleton_method, :display, :dup, :enum_for, :eql?, :equal?,
+:extend, :freeze, :frozen?, :hash, :inspect, :instance_eval,
+:instance_exec, :instance_of?, :instance_variable_defined?,
+:instance_variable_get, :instance_variable_set, :instance_variables,
+:is_a?, :itself, :kind_of?, :method, :methods, :nil?, :object_id, :pp,
+:private_methods, :protected_methods, :public_method, :public_methods,
+:public_send, :remove_instance_variable, :respond_to?, :send,
+:singleton_class, :singleton_method, :singleton_methods, :taint,
+:tainted?, :tap, :to_enum, :to_s, :trust, :untaint, :untrust,
+:untrusted?, :yield_self]
+```
+
+Objetos genéricos vs. objetos básicos
+
+Pedirle a Ruby que cree un nuevo objeto con el comando `Object.new` produce lo que aquí llamamos, informalmente, un objeto genérico. Ruby también tiene objetos básicos, y ese es un nombre más formal. Si llamas a `BasicObject.new`, obtienes una especie de prototipo de objeto que puede hacer muy poco. Ni siquiera puedes pedirle a un objeto básico que te muestre sus métodos, ¡porque no tiene ningún método `methods`! De hecho, solo tiene ocho métodos: suficientes para que el objeto exista y sea identificable, y poco más.
