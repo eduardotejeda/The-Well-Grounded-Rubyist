@@ -1186,12 +1186,14 @@ Te evita tener que revisar toda la lista de posibles solicitudes.
 
 En cambio, después de comprobar que el objeto ticket sabe qué hacer, le pasas el mensaje y dejas que haga lo que tenga que hacer.
 
-| Usar `__send__` o `public_send` en lugar de `send` |
-| :------------------------------------------------: |
+```
+ Usar `__send__` o `public_send` en lugar de `send`
+
 
 |El envío es un concepto amplio: se envía un correo electrónico, se envían datos a sockets de E/S, etc. No es raro que los programas definan un método llamado `send` que entra en conflicto con el método `send` integrado de Ruby. Por lo tanto, Ruby ofrece una forma alternativa de llamar a `send`: `__send__`. Por convención, nadie escribe un método con ese nombre, por lo que la versión integrada de Ruby siempre está disponible y nunca entra en conflicto con métodos nuevos. Aunque parezca extraño, es más seguro que la versión `send` simple desde el punto de vista de los conflictos de nombres de métodos.
 
-Además, existe una versión segura —aunque de otra manera— de `send` (o `__send__`) llamada `public_send`. La diferencia entre `send` simple y `public_send` es que `send` puede llamar a los métodos privados de un objeto, mientras que `public_send` no. Hablaremos de los métodos privados más adelante en el libro, pero por si tienes curiosidad por saber qué hacía `public_send` en la lista de métodos, esa es la idea principal.|
+Además, existe una versión segura —aunque de otra manera— de `send` (o `__send__`) llamada `public_send`. La diferencia entre `send` simple y `public_send` es que `send` puede llamar a los métodos privados de un objeto, mientras que `public_send` no. Hablaremos de los métodos privados más adelante en el libro, pero por si tienes curiosidad por saber qué hacía `public_send` en la lista de métodos, esa es la idea principal.
+```
 
 La mayoría de las veces, usarás el operador punto para enviar mensajes a objetos. Pero la alternativa de envío puede ser útil y potente, lo suficientemente potente y propensa a errores como para que casi siempre merezca al menos el nivel de seguridad que ofrece una llamada a `respond_to?`.
 
@@ -1218,7 +1220,8 @@ Si no lo haces, Ruby te indicará que hay un problema. Por ejemplo, al llamar a 
 obj = Object.new
 def obj.one_arg(x)
 puts "¡Requiero un solo argumento!"
-end obj.one_arg(1,2,3)
+end
+obj.one_arg(1,2,3)
 ```
 
 obtiene el siguiente error:
