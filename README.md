@@ -1227,3 +1227,41 @@ obj.one_arg(1,2,3)
 obtiene el siguiente error:
 
 `ArgumentError: número incorrecto de argumentos (se proporcionaron 3, se esperaba 1)`
+
+Es posible escribir un método que admita cualquier número de argumentos. Para ello, coloca un asterisco (\*) delante del nombre de cada argumento:
+
+```
+def obj.multi_args(*x)
+puts "¡Puedo aceptar cero o más argumentos!"
+end
+```
+
+La notación \*x significa que, al llamar al método, puedes proporcionar cualquier número de argumentos (o ninguno). En este caso, a la variable x se le asigna un array de valores que corresponden a los argumentos enviados. Puedes examinar los valores uno a uno recorriendo el array. (Veremos los arrays con más detalle en el capítulo 9).
+
+Puedes ajustar el número de argumentos combinando argumentos obligatorios y opcionales.
+
+```
+def two_or_more(a,b,*c)
+puts "I require two or more arguments!"
+puts "And sure enough, I got: "
+p a, b, c
+end
+```
+
+In this example, a and b are required arguments. The final \*c will sponge up any
+other arguments that you may send and put them into an array in the variable c. If you
+call two_or_more(1,2,3,4,5), you’ll get the following report of what got assigned to
+a, b, and c:
+
+```
+I require two or more arguments!
+21And sure enough, I got:
+[3, 4, 5]
+```
+
+(Usar `p` en lugar de `print` o `puts` da como resultado que el array se imprima en notación de array.
+De lo contrario, cada elemento del array aparecería en una línea separada, lo que dificultaría ver que se trata de un array).
+
+También puedes hacer que un argumento sea opcional asignándole un valor predeterminado.
+
+### 2.4.2 Valores predeterminados para los argumentos
