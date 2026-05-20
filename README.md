@@ -1131,7 +1131,7 @@ obj = Object.new
 obj.talk
 ```
 
-Dare error :
+Dara error :
 
 `NoMethodError: undefined method `talk' for #<Object:0x00000102836550>`
 
@@ -1147,3 +1147,41 @@ end
 ```
 
 `respond_to?` es un ejemplo de introspeccion o refleccion, dos terminos que refieren a analizar un programa miestras corre.
+
+### 2.3.3 Mandando mensajes a objetos con el metodo `send`
+
+Supongamos que quieres que un usuario obtenga información del objeto ticket introduciendo un término de consulta adecuado (lugar, artista, etc.) en el teclado. Esto es lo que añadirías al programa existente:
+
+```
+print "Información solicitada: "
+request = gets.chomp
+```
+
+La segunda línea de código obtiene una línea de entrada del teclado, elimina el carácter de salto de línea final y guarda la cadena resultante en la variable request.
+
+En este punto, podrías comprobar la entrada con diferentes valores utilizando el operador de comparación de doble signo igual (==), que compara cadenas según su contenido, y llamando al método cuyo valor coincida:
+
+```
+if request == "lugar"
+puts ticket.lugar
+elsif request == "artista"
+puts ticket.performer
+```
+
+Para ser exhaustivo, tendrías que revisar toda la lista de propiedades del ticket. Eso sería muy extenso.
+
+Hay una alternativa: puedes enviar la palabra directamente al objeto ticket. En lugar del código anterior, harías lo siguiente:
+
+```
+if ticket.respond_to?(request)
+puts ticket.send(request)
+else
+puts "No hay información disponible"
+end
+
+```
+
+Esta versión utiliza el método send como una forma general de enviar un mensaje al objeto ticket.
+Te evita tener que revisar toda la lista de posibles solicitudes.
+
+En cambio, después de comprobar que el objeto ticket sabe qué hacer, le pasas el mensaje y dejas que haga lo que tenga que hacer.
