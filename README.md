@@ -1186,8 +1186,41 @@ Te evita tener que revisar toda la lista de posibles solicitudes.
 
 En cambio, después de comprobar que el objeto ticket sabe qué hacer, le pasas el mensaje y dejas que haga lo que tenga que hacer.
 
-Usar `__send__` o `public_send` en lugar de `send`
+| Usar `__send__` o `public_send` en lugar de `send` |
+| :------------------------------------------------: |
 
-El envío es un concepto amplio: se envía un correo electrónico, se envían datos a sockets de E/S, etc. No es raro que los programas definan un método llamado `send` que entra en conflicto con el método `send` integrado de Ruby. Por lo tanto, Ruby ofrece una forma alternativa de llamar a `send`: `__send__`. Por convención, nadie escribe un método con ese nombre, por lo que la versión integrada de Ruby siempre está disponible y nunca entra en conflicto con métodos nuevos. Aunque parezca extraño, es más seguro que la versión `send` simple desde el punto de vista de los conflictos de nombres de métodos.
+|El envío es un concepto amplio: se envía un correo electrónico, se envían datos a sockets de E/S, etc. No es raro que los programas definan un método llamado `send` que entra en conflicto con el método `send` integrado de Ruby. Por lo tanto, Ruby ofrece una forma alternativa de llamar a `send`: `__send__`. Por convención, nadie escribe un método con ese nombre, por lo que la versión integrada de Ruby siempre está disponible y nunca entra en conflicto con métodos nuevos. Aunque parezca extraño, es más seguro que la versión `send` simple desde el punto de vista de los conflictos de nombres de métodos.
 
-Además, existe una versión segura —aunque de otra manera— de `send` (o `__send__`) llamada `public_send`. La diferencia entre `send` simple y `public_send` es que `send` puede llamar a los métodos privados de un objeto, mientras que `public_send` no. Hablaremos de los métodos privados más adelante en el libro, pero por si tienes curiosidad por saber qué hacía `public_send` en la lista de métodos, esa es la idea principal.
+Además, existe una versión segura —aunque de otra manera— de `send` (o `__send__`) llamada `public_send`. La diferencia entre `send` simple y `public_send` es que `send` puede llamar a los métodos privados de un objeto, mientras que `public_send` no. Hablaremos de los métodos privados más adelante en el libro, pero por si tienes curiosidad por saber qué hacía `public_send` en la lista de métodos, esa es la idea principal.|
+
+La mayoría de las veces, usarás el operador punto para enviar mensajes a objetos. Pero la alternativa de envío puede ser útil y potente, lo suficientemente potente y propensa a errores como para que casi siempre merezca al menos el nivel de seguridad que ofrece una llamada a `respond_to?`.
+
+En algunos casos, `respond_to?` podría ser incluso demasiado general para ser segura; podrías enviar un mensaje a un objeto solo si este se incluye en una lista de mensajes permitidos predeterminada. Esto es especialmente importante al trabajar con la entrada del usuario. Tomar la entrada del usuario y usarla sin verificación para llamar a objetos en tu programa puede exponerte a comportamientos inesperados o incluso a ataques maliciosos. El principio fundamental es la precaución: ten cuidado al enviar mensajes arbitrarios a objetos, especialmente si estos mensajes se basan en la elección o entrada del usuario.
+
+## 2.4 Un análisis detallado de los argumentos de los métodos
+
+Los métodos que escribas en Ruby pueden aceptar cero o más argumentos. También pueden admitir un número variable de argumentos. En esta sección, analizaremos la semántica de los argumentos de varias maneras:
+
+- La diferencia entre argumentos obligatorios y opcionales
+- Cómo asignar valores predeterminados a los argumentos
+- Las reglas que rigen el orden en que debes organizar los parámetros en la firma del método para que Ruby pueda interpretar las listas de argumentos en las llamadas a métodos y vincular los parámetros correctamente
+- Lo que no puedes hacer con los argumentos en Ruby
+
+La Tabla 2.2 resume estos aspectos al final de esta sección.
+
+### 2.4.1 Argumentos obligatorios y opcionales
+
+Al llamar a un método de Ruby, debes proporcionar el número correcto de argumentos.
+
+Si no lo haces, Ruby te indicará que hay un problema. Por ejemplo, al llamar a un método de un argumento con tres argumentos:
+
+```
+obj = Object.new
+def obj.one_arg(x)
+puts "¡Requiero un solo argumento!"
+end obj.one_arg(1,2,3)
+```
+
+obtiene el siguiente error:
+
+`ArgumentError: número incorrecto de argumentos (se proporcionaron 3, se esperaba 1)`
