@@ -1265,3 +1265,28 @@ De lo contrario, cada elemento del array aparecería en una línea separada, lo 
 También puedes hacer que un argumento sea opcional asignándole un valor predeterminado.
 
 ### 2.4.2 Valores predeterminados para los argumentos
+
+Cuando se proporciona un valor predeterminado para un argumento, si dicho argumento no se proporciona, la variable correspondiente recibirá el valor predeterminado.
+
+Los argumentos predeterminados se indican con un signo igual seguido de un valor. Aquí hay un ejemplo:
+
+```
+def default_args(a,b,c=1)
+puts "Values of variables: ",a,b,c
+end
+```
+
+Si se hace un llamado así,
+
+`default_args(3,2)`
+
+you’ll see this result:
+
+```
+Values of variables:
+1
+2
+3
+```
+
+No se proporcionó ningún valor para c en la llamada al método, por lo que c se estableció al valor predeterminado proporcionado en la lista de parámetros: 1.
