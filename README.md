@@ -1290,3 +1290,14 @@ Values of variables:
 ```
 
 No se proporcionó ningún valor para c en la llamada al método, por lo que c se estableció al valor predeterminado proporcionado en la lista de parámetros: 1.
+
+`default_args(4,5,6)`
+
+produce el siguiente resultado:
+
+```
+Values of variables:
+4
+5
+6
+```
