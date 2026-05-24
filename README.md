@@ -1303,3 +1303,42 @@ Values of variables:
 ```
 
 ### 2.4.3 EL orden de los parametros y los argumentos
+
+¿Qué resultado esperaría del siguiente fragmento de código?
+
+```
+def mixed_args(a,b,*c,d)
+puts "Arguments:"
+p a,b,c,d
+end
+mixed_args(1,2,3,4,5)
+```
+
+Básicamente, Ruby intenta asignar valores a tantas variables como sea posible. Los parámetros de asignación tienen la menor prioridad: si el método se queda sin argumentos después de asignar los argumentos obligatorios, un parámetro comodín como \*c termina siendo un array vacío.
+
+Los argumentos obligatorios, tanto antes como después de *c, se procesan antes que *c.
+
+El resultado del fragmento anterior es este:
+
+```
+Arguments:
+1
+2
+[3, 4]
+5
+```
+
+Los parámetros a y b reciben los dos primeros argumentos, 1 y 2. Dado que el parámetro d, al final de la lista, representa un argumento obligatorio, toma el primer valor disponible del extremo derecho de la lista de argumentos, es decir, 5. Lo que queda en el medio (3, 4) es tomado por c.
+
+Si solo proporcionas los argumentos necesarios para que coincidan con los requeridos por el método, el array de argumentos de reserva estará vacío. La llamada al método
+
+`mixed_args(1,2,3)`
+
+produce la siguiente salida:
+
+```
+1
+2
+[]
+3
+```
