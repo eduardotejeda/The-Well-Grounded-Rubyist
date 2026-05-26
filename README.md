@@ -1342,3 +1342,6 @@ produce la siguiente salida:
 []
 3
 ```
+En este ejemplo, c tiene menor prioridad y se queda sin valor.
+
+
