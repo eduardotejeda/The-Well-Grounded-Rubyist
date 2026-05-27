@@ -1390,6 +1390,9 @@ Ese es el valor de retorno de la llamada a p. Es una representación en array de
 
 Además de los fundamentos de la sintaxis de los argumentos, lo más importante que se puede extraer de estos ejemplos es la idea, quizás obvia, de que, hagas lo que hagas, cada parámetro termina vinculado a algún valor. No existe ningún parámetro que simplemente desaparezca sin dejar rastro.
 
+![Ejemplo 2.2](https://raw.githubusercontent.com/eduardotejeda/The-Well-Grounded-Rubyist/refs/heads/main/logica%20de%20asignacion%20de%20parametros%202.2.jpg)
+
+
 ### 2.4.4 Lo que no se puede hacer en las listas de argumentos
 
 Los parámetros tienen un orden jerárquico. Los obligatorios tienen prioridad, independientemente de si aparecen a la izquierda o a la derecha de la lista. Todos los opcionales deben aparecer en el medio.
