@@ -1342,6 +1342,42 @@ produce la siguiente salida:
 []
 3
 ```
+
 En este ejemplo, c tiene menor prioridad y se queda sin valor.
 
+```
+def args_unleashed(a,b=1,*c,d,e)
+p a,b,c,d,e
+end
+```
 
+> > args_unleashed(1,2,3,4,5)
+> > 1
+> > 2
+> > [3]
+> > 4
+> > 5
+> > => [1, 2, [3], 4, 5]
+> > args_unleashed(1,2,3,4)
+> > 1
+> > 2
+> > []
+> > 3
+> > 4
+> > => [1, 2, [], 3, 4]
+> > args_unleashed(1,2,3)
+> > 1
+> > 1
+> > []
+> > 2
+> > 3
+> > => [1, 1, [], 2, 3]
+> > args_unleashed(1,2,3,4,5,6,7,8)
+> > 1
+> > 2
+> > [3, 4, 5, 6]
+> > 7
+> > 8
+> > => [1, 2, [3, 4, 5, 6], 7, 8]
+> > args_unleashed(1,2)
+> > ArgumentError: wrong number of arguments (given 2, expected 3+)
