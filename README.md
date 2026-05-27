@@ -1345,11 +1345,17 @@ produce la siguiente salida:
 
 En este ejemplo, c tiene menor prioridad y se queda sin valor.
 
+Puedes usar una sintaxis de parámetros bastante compleja. Aquí tienes un método que toma un argumento obligatorio; un argumento opcional que por defecto es 1; dos argumentos obligatorios más tomados de la derecha; y, en algún punto intermedio, todo lo demás:
+
 ```
 def args_unleashed(a,b=1,*c,d,e)
 p a,b,c,d,e
 end
 ```
+
+Aquí tienes una sesión de irb que pone a prueba este método. Observa que el valor de retorno de la llamada al método, en todos los casos, es un array que contiene todos los valores.
+
+Ese es el valor de retorno de la llamada a p. Es una representación en array de los mismos valores que ves impresos individualmente en líneas separadas:
 
 > > args_unleashed(1,2,3,4,5)
 > > 1
@@ -1381,3 +1387,7 @@ end
 > > => [1, 2, [3, 4, 5, 6], 7, 8]
 > > args_unleashed(1,2)
 > > ArgumentError: wrong number of arguments (given 2, expected 3+)
+
+Además de los fundamentos de la sintaxis de los argumentos, lo más importante que se puede extraer de estos ejemplos es la idea, quizás obvia, de que, hagas lo que hagas, cada parámetro termina vinculado a algún valor. No existe ningún parámetro que simplemente desaparezca sin dejar rastro.
+
+### 2.4.4 Lo que no se puede hacer en las listas de argumentos
