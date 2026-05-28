@@ -1397,3 +1397,17 @@ Además de los fundamentos de la sintaxis de los argumentos, lo más importante 
 
 Los parámetros tienen un orden jerárquico. Los obligatorios tienen prioridad, independientemente de si aparecen a la izquierda o a la derecha de la lista. Todos los opcionales deben aparecer en el medio.
 El medio puede ser el medio de la nada:
+
+Y puedes colocar los argumentos obligatorios solo a la izquierda o solo a la derecha, o en ambos lados.
+Lo que no puedes hacer es colocar el argumento auxiliar a la izquierda de ningún argumento con valor predeterminado.
+Si haces esto,
+```
+def broken_args(x,*y,z=1)
+end
+```
+
+Es un error de sintaxis, porque no hay manera de que sea correcto. Una vez que le has dado a x su
+argumento y has absorbido todos los argumentos restantes en el array y, nunca queda nada
+para z.
+
+Afortunadamente, Ruby no permite más de un argumento de esponja en una lista de parámetros. Asegúrate de ordenar tus argumentos de forma lógica y, siempre que sea posible, mantén tus listas de argumentos razonablemente sencillas.
