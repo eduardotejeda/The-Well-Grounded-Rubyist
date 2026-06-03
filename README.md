@@ -1411,3 +1411,5 @@ argumento y has absorbido todos los argumentos restantes en el array y, nunca qu
 para z.
 
 Afortunadamente, Ruby no permite más de un argumento de esponja en una lista de parámetros. Asegúrate de ordenar tus argumentos de forma lógica y, siempre que sea posible, mantén tus listas de argumentos razonablemente sencillas.
+
+## 2.5 Variables locales y asignación de variables
