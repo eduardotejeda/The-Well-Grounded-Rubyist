@@ -1413,3 +1413,5 @@ para z.
 Afortunadamente, Ruby no permite más de un argumento de esponja en una lista de parámetros. Asegúrate de ordenar tus argumentos de forma lógica y, siempre que sea posible, mantén tus listas de argumentos razonablemente sencillas.
 
 ## 2.5 Variables locales y asignación de variables
+
+Los nombres de las variables locales comienzan con una letra minúscula o un guion bajo y están compuestos por caracteres alfanuméricos y guiones bajos. Todos estos son nombres de variables locales válidos, incluido el guion bajo aislado:
