@@ -1392,7 +1392,6 @@ Además de los fundamentos de la sintaxis de los argumentos, lo más importante 
 
 ![Ejemplo 2.2](https://raw.githubusercontent.com/eduardotejeda/The-Well-Grounded-Rubyist/refs/heads/main/logica%20de%20asignacion%20de%20parametros%202.2.jpg)
 
-
 ### 2.4.4 Lo que no se puede hacer en las listas de argumentos
 
 Los parámetros tienen un orden jerárquico. Los obligatorios tienen prioridad, independientemente de si aparecen a la izquierda o a la derecha de la lista. Todos los opcionales deben aparecer en el medio.
@@ -1401,6 +1400,7 @@ El medio puede ser el medio de la nada:
 Y puedes colocar los argumentos obligatorios solo a la izquierda o solo a la derecha, o en ambos lados.
 Lo que no puedes hacer es colocar el argumento auxiliar a la izquierda de ningún argumento con valor predeterminado.
 Si haces esto,
+
 ```
 def broken_args(x,*y,z=1)
 end
@@ -1415,3 +1415,21 @@ Afortunadamente, Ruby no permite más de un argumento de esponja en una lista de
 ## 2.5 Variables locales y asignación de variables
 
 Los nombres de las variables locales comienzan con una letra minúscula o un guion bajo y están compuestos por caracteres alfanuméricos y guiones bajos. Todos estos son nombres de variables locales válidos, incluido el guion bajo aislado:
+
+```
+x
+_x
+name
+first_name
+plan9
+user_ID
+_
+```
+
+El termino variable local indica que la variable tiene un alcance limitado: solo es visible en una parte limitada del programa, como la definición de un método.
+
+
+Los nombres de las variables locales se pueden reutilizar en diferentes ámbitos. Por ejemplo, puedes usar el nombre de la variable `x` en más de un lugar, y siempre que esos lugares tengan ámbitos distintos, las dos variables `x` se tratan como completamente separadas. (Recuerda que el estilo convencional de Ruby prefiere los nombres con guion bajo a los nombres en formato camelCase para las variables locales).
+
+El ámbito es un tema importante en sí mismo, y lo profundizaremos en el capítulo 5. Sin embargo, puedes empezar a familiarizarte con algunos aspectos clave ahora mismo, al examinar cómo aparecen y desaparecen las variables locales. El caso clásico de ámbito local es la definición de un método.
+Observa lo que sucede con `x` en este ejemplo:
