@@ -1428,8 +1428,31 @@ _
 
 El termino variable local indica que la variable tiene un alcance limitado: solo es visible en una parte limitada del programa, como la definición de un método.
 
-
 Los nombres de las variables locales se pueden reutilizar en diferentes ámbitos. Por ejemplo, puedes usar el nombre de la variable `x` en más de un lugar, y siempre que esos lugares tengan ámbitos distintos, las dos variables `x` se tratan como completamente separadas. (Recuerda que el estilo convencional de Ruby prefiere los nombres con guion bajo a los nombres en formato camelCase para las variables locales).
 
 El ámbito es un tema importante en sí mismo, y lo profundizaremos en el capítulo 5. Sin embargo, puedes empezar a familiarizarte con algunos aspectos clave ahora mismo, al examinar cómo aparecen y desaparecen las variables locales. El caso clásico de ámbito local es la definición de un método.
 Observa lo que sucede con `x` en este ejemplo:
+
+```
+def say_goodbye
+x = "Goodbye"
+puts x
+end
+def start_here
+x = "Hello"
+puts x
+say_goodbye
+puts "Let's check whether x remained the same:"
+puts x
+end
+start_here
+```
+
+La salida debe ser así:
+
+```
+Hello
+Goodbye
+Let's check whether x remained the same:
+Hello
+```
