@@ -1456,3 +1456,7 @@ Goodbye
 Let's check whether x remained the same:
 Hello
 ```
+
+Las variables locales en este último ejemplo se crean mediante asignación explícita. (Como ya se ha visto, las variables locales también pueden crearse mediante la vinculación de argumentos de método a parámetros de método). Pero, ¿qué ocurre cuando se realiza la asignación o inicialización? ¿Cuál es exactamente la relación entre una variable y el objeto que representa?
+
+### 2.5.1 Variables, objetos y referencias
