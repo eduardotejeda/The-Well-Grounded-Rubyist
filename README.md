@@ -1460,3 +1460,20 @@ Hello
 Las variables locales en este último ejemplo se crean mediante asignación explícita. (Como ya se ha visto, las variables locales también pueden crearse mediante la vinculación de argumentos de método a parámetros de método). Pero, ¿qué ocurre cuando se realiza la asignación o inicialización? ¿Cuál es exactamente la relación entre una variable y el objeto que representa?
 
 ### 2.5.1 Variables, objetos y referencias
+
+INTRODUCIR REFERENCIAS
+La respuesta es que las variables en Ruby (con algunas excepciones, sobre todo las variables vinculadas a enteros) no almacenan valores de objetos. `str` no contiene "Hola". En cambio, `str`contiene una referencia a un objeto de tipo cadena. Es este objeto de tipo cadena el que tiene la característica de contener las letras que componen "Hola".
+
+En una asignación con un nombre de variable a la izquierda y un objeto a la derecha, la
+variable recibe una referencia al objeto. En una asignación de una variable a
+otra (`abc = str`), la variable de la izquierda recibe una copia de la referencia almacenada en la variable de la derecha, con el resultado de que ambas variables ahora contienen referencias al mismo objeto.
+
+Desreferenciación: valores inmediatos
+
+Algunos objetos en Ruby se almacenan en variables como valores inmediatos. Estos incluyen:
+enteros, símbolos (que se ven como :this) y los objetos especiales true, false y
+nil. Cuando se asigna uno de estos valores a una variable (x = 1), la variable contiene
+el valor en sí, en lugar de una referencia a él.
+
+En la práctica, esto no tiene importancia (y a menudo se dará por sentado, en lugar de
+explicarlo repetidamente, en las discusiones sobre referencias y temas relacionados en este libro). Ruby gestiona la desreferenciación de referencias de objetos automáticamente; no es necesario realizar ningún trabajo adicional para enviar un mensaje a un objeto que contiene, por ejemplo, una referencia a una cadena, en comparación con un objeto que contiene un valor entero inmediato.
