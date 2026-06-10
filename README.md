@@ -1475,5 +1475,14 @@ enteros, símbolos (que se ven como :this) y los objetos especiales true, false 
 nil. Cuando se asigna uno de estos valores a una variable (x = 1), la variable contiene
 el valor en sí, en lugar de una referencia a él.
 
-En la práctica, esto no tiene importancia (y a menudo se dará por sentado, en lugar de
-explicarlo repetidamente, en las discusiones sobre referencias y temas relacionados en este libro). Ruby gestiona la desreferenciación de referencias de objetos automáticamente; no es necesario realizar ningún trabajo adicional para enviar un mensaje a un objeto que contiene, por ejemplo, una referencia a una cadena, en comparación con un objeto que contiene un valor entero inmediato.
+En la práctica, esto no tiene importancia (y a menudo se dará por sentado, en lugar de explicarlo repetidamente, en las discusiones sobre referencias y temas relacionados en este libro). Ruby gestiona la desreferenciación de referencias de objetos automáticamente; no es necesario realizar ningún trabajo adicional para enviar un mensaje a un objeto que contiene, por ejemplo, una referencia a una cadena, en comparación con un objeto que contiene un valor entero inmediato.
+
+Pero la regla de representación de valor inmediato tiene un par de ramificaciones interesantes, especialmente en lo que respecta a los enteros. Para empezar, cualquier objeto que se represente como un valor inmediato es siempre exactamente el mismo objeto, sin importar a cuántas variables se le asigne. Solo hay un objeto 100, solo un objeto falso, y así sucesivamente.
+La naturaleza inmediata y única de las variables vinculadas a enteros explica la ausencia de operadores de preincremento y postincremento en Ruby; es decir, no se puede hacer esto en Ruby:
+
+x = 1
+x++
+
+No existe tal operador
+
+La razón es que, debido a la presencia inmediata del 1 en x, x++ sería como 1++, lo que significa que se cambiaría el número 1 por el número 2, y eso no tiene sentido.
