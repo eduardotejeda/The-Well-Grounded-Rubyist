@@ -6,13 +6,13 @@
 
 Esta edición se enfoca en la versión 2.5 de Ruby (en este momento va por la versión 3.7).
 
-Ruby es un lenguaje de programación interpretativo multiproposito, orientado a objeto. Su creador es Yukihiro "Matz" Matsumoto y fue anunciado por primera vez en 1993 y su primera version salió en 1995.
+Ruby es un lenguaje de programación interpretado, multipropósito y orientado a objetos. Su creador es Yukihiro "Matz" Matsumoto; fue anunciado por primera vez en 1993 y su primera versión salió en 1995.
 
 > Un lenguaje de programación interpretado es aquel en el que el código que escribes (el código fuente) no se traduce completamente a lenguaje máquina antes de ejecutarse. En cambio, se ejecuta línea por línea (o instrucción por instrucción) gracias a un programa especial llamado intérprete.
 
 ![Programación Orientada a Objetos](https://github.com/eduardotejeda/The-Well-Grounded-Rubyist/blob/main/Programaci%C3%B3n%20orientada%20a%20objetos.jpg)
 
-Tiene un framework muy popular llamado Ruby on Rails usado para crear aplicaciones web modernas (backend + base de datos). Creado por David Heinemeier Hansson (en 2004–2005).
+Tiene un framework muy popular llamado Ruby on Rails, usado para crear aplicaciones web modernas (backend + base de datos). Fue creado por David Heinemeier Hansson (en 2004–2005).
 
 ## Capítulo 1: Impulsando tu alfabetización en Ruby
 
@@ -52,14 +52,14 @@ Estas operaciones funcionan con números enteros y decimales.
 
 ```
 x = 1
-Springs = "hello"
+springs = "hello"
 ```
 
-Es símbolo de "=" asigna el objeto de la derecha a la variable de la izquierda. El objeto es un valor que es representado por la variable
+El símbolo "=" asigna el objeto de la derecha a la variable de la izquierda. El objeto es un valor que está representado por la variable.
 
 ### Comparación de dos valores
 
-`X == Y` se usando dos símbolos de "==".
+`x == y` se usa con dos símbolos de "==".
 
 ### Convertir un texto numérico a número
 
@@ -104,7 +104,7 @@ else
 end
 ```
 
-Los enunciados condicionales termina con la palabra end.
+Los enunciados condicionales terminan con la palabra end.
 
 ### Objetos con valores especiales
 
@@ -114,9 +114,9 @@ false
 nil
 ```
 
-Los objetos `true` y `false` por lo general son el retorno de enunciados condicionales. El objeto `nil` representa la ausencia de valor o resultado.
+Los objetos `true` y `false` suelen ser el retorno de enunciados condicionales. El objeto `nil` representa la ausencia de valor o resultado.
 
-`false` y `nil` hacen que un enunciado condicional tenga el resultado falso. Todos los demás, `true` o hasta `0` o texto vacío, dan un resultando positivo.
+`false` y `nil` hacen que un enunciado condicional tenga el resultado falso. Todos los demás, `true`, incluso `0` o un texto vacío, dan un resultado positivo.
 
 ### self
 
@@ -179,59 +179,59 @@ Los nombres de los métodos en Ruby siguen las mismas reglas que las variables l
 
 ### 1.1.4 Llamada de métodos, mensajes y objetos en Ruby
 
-Ruby ve a todas las estructuras-- desde los tipos de datos escalares que representan un único valor atómico, hasta las estructuras complejas como las matrices -- como objetos.
+Ruby ve a todas las estructuras, desde los tipos de datos escalares que representan un único valor atómico hasta las estructuras complejas como las matrices, como objetos.
 
-> Los tipos de datos escalares en programación representan un único valor atómico, a diferencia de las estructuras complejas. Los principales tipos escalares son enteros (int), números de punto flotante/decimales (float/double), booleanos (bool, verdadero/falso) y caracteres (char), fundamentales para operaciones básicas, cálculos y lógica.
+> Los tipos de datos escalares en programación representan un único valor atómico, a diferencia de las estructuras complejas. Los principales tipos escalares son enteros (int), números de punto flotante o decimales (float/double), booleanos (bool, verdadero/falso) y caracteres (char), fundamentales para operaciones básicas, cálculos y lógica.
 
-Cada objetos es capaz de entender una determinada cantidad de mensajes. Cada mensaje que un objeto entiendo corresponde a un método, una rutina ejecutable con nombre cuya ejecución el objeto tiene la capacidad de activar
+Cada objeto es capaz de entender una determinada cantidad de mensajes. Cada mensaje que un objeto entiende corresponde a un método, una rutina ejecutable con nombre cuya ejecución el objeto tiene la capacidad de activar.
 
-Los objetos son representados por constructores literales -- como las doble comillas "" en una cadena de caracteres, un tipo de dato utilizado para representar texto -- o variables a las que han sido enlazadas.
+Los objetos están representados por constructores literales, como las comillas dobles "" en una cadena de caracteres, un tipo de dato utilizado para representar texto, o por variables a las que han sido enlazadas.
 
-El enviado de los mensajes se logra con el operador especial punto ".": el mensaje a la derecha del "." es enviado al objeto a la izquierda del punto.( Hay otras formas de enviar mensajes a objetos, pero el "." es el mas común). Recordemos el ejemplo anteriorÑ
+El envío de mensajes se logra con el operador especial punto ".": el mensaje a la derecha del "." se envía al objeto que se encuentra a la izquierda del punto. Hay otras formas de enviar mensajes a objetos, pero el "." es el más común. Recordemos el ejemplo anterior.
 
 `x = "100".to_i`
 
-El punto indica que el mensaje `to_i` esta siendo enviado a la cadena de caracteres `"100"`. El `"100"` es el receptor del mensaje. También podemos decir que se llama al método to_i en la cadena "100". El resultado de la llamada al método (el entero 100) sirve como el lado derecho de la asignación a la variable x.
+El punto indica que el mensaje `to_i` está siendo enviado a la cadena de caracteres `"100"`. El `"100"` es el receptor del mensaje. También podemos decir que se llama al método `to_i` en la cadena "100". El resultado de la llamada al método (el entero 100) sirve como el lado derecho de la asignación a la variable `x`.
 
-### ¿Por que la doble terminología?
+### ¿Por qué la doble terminología?
 
-En Ruby, es mas correcto decir, se manda un mensaje a un objeto que lo recibe, y el objeto ejecuta el método correspondiente. Pero a veces no hay método correspondiente. Puedes poner cualquier cosa en el lado derecho del punto ".", y no hay garantía al recibirlo tendrá un método que coincida con el mensaje enviado.
+En Ruby, es más correcto decir que se manda un mensaje a un objeto que lo recibe, y el objeto ejecuta el método correspondiente. Pero a veces no hay un método correspondiente. Puedes poner cualquier cosa en el lado derecho del punto ".", y no hay garantía de que al recibirlo tenga un método que coincida con el mensaje enviado.
 
-Suena caótico, pero no lo es, porque los métodos pueden interceptar mensajes desconocidos y tratar de darles sentido. Esto es casi siempre logrado usando el método `method_missing` explicado en el capítulo 4. Ruby on Rails usa mucho esa técnica.
+Suena caótico, pero no lo es, porque los métodos pueden interceptar mensajes desconocidos y tratar de darles sentido. Esto se logra casi siempre usando el método `method_missing`, explicado en el capítulo 4. Ruby on Rails usa mucho esa técnica.
 
-Los métodos pueden tener argumentos, que también son objetos. Casi todo es un objeto en Ruby; aun hay unas estructuras semánticas que ayudan a crear y manipular objetos; esas estructuras no lo son. Aquí un ejemplo de un llamado a un método con paréntesis:
+Los métodos pueden tener argumentos, que también son objetos. Casi todo es un objeto en Ruby; aún hay algunas estructuras semánticas que ayudan a crear y manipular objetos, aunque esas estructuras no lo sean. Aquí tienes un ejemplo de una llamada a un método con paréntesis:
 
-`x = "100".to_is(9)`
+`x = "100".to_i(9)`
 
-Ese argumento 9 genera un decimal entero equivalente a 100 en base 9: el resultado sería 81 decimal.
+Ese argumento 9 genera un entero decimal equivalente a 100 en base 9: el resultado sería 81 decimal.
 
-Ese ejemplo muestra los paréntesis alrededor del argumento "(9)"; esos paréntesis son opcionales, pero en operaciones más complejas es mejor agregarlos para hacer el texto más entendible.
+Ese ejemplo muestra los paréntesis alrededor del argumento `(9)`. Esos paréntesis son opcionales, pero en operaciones más complejas es mejor agregarlos para hacer el texto más entendible.
 
-Todo el universo de Ruby consiste en objetos y mensajes que son enviados a ellos. La mayor parte del tiempo como programador de Ruby consiste en definir métodos (decirles qué van a hacer) y mandando mensajes a métodos (ordenándoles que hagan algo).
+Todo el universo de Ruby consiste en objetos y mensajes que se envían a ellos. La mayor parte del tiempo, como programador de Ruby, consiste en definir métodos (decirles qué van a hacer) y mandar mensajes a esos métodos (ordenándoles que hagan algo).
 
-También, para hacer llamadas de métodos, existe el bareword-style invocations.
+También, para hacer llamadas a métodos, existe la invocación de estilo bareword.
 
 Cuando escribimos:
 
 `puts "Hello"`
 
-Le estamos diciendo a Ruby que mande el mensaje puts con el argumento "Hello" al objeto por defecto self. A menudo hay un self cuando el programa corre.
+Le estamos diciendo a Ruby que mande el mensaje `puts` con el argumento `"Hello"` al objeto por defecto `self`. A menudo hay un `self` cuando el programa corre.
 
-El concepto de objeto en Ruby es lo más importante. Seguido del concepto de clases.
+El concepto de objeto en Ruby es lo más importante, seguido del concepto de clases.
 
 `self.puts("Hello")`
 
 ### El origen de los objetos en las clases
 
-Las clases definen la funcionalidad de un objeto, y cada objeto es una instancia de exactamente una clase. Ruby trae un gran número de clases de fábrica, que representan tipos de datos como caracteres, listas y enteros. Cada vez que creamos un objeto carácter, creamos una instancia de la clase string.
+Las clases definen la funcionalidad de un objeto, y cada objeto es una instancia de exactamente una clase. Ruby trae un gran número de clases de fábrica, que representan tipos de datos como caracteres, listas y enteros. Cada vez que creamos un objeto carácter, creamos una instancia de la clase `String`.
 
-Los objetos pueden cambiar, adquiriendo métodos y comportamientos que no fueron definidos en su clase. La clase es responsable de llevar un objeto a la existencia, en un proceso llamado instantiation (instanciar), pero después de ahí el objeto tiene vida propia.
+Los objetos pueden cambiar, adquiriendo métodos y comportamientos que no fueron definidos en su clase. La clase es responsable de llevar un objeto a la existencia, en un proceso llamado instanciación, pero después de ahí el objeto tiene vida propia.
 
 La capacidad de un objeto de adoptar comportamientos fuera de su clase es uno de los principios fundamentales en Ruby.
 
 ## 1.1.5 Escribiendo y salvando un programa simple
 
-Inicia con un convertidor de temperatura de Celsius a Fahrenheit, no usaremos números flotantes para simplificar el ejemplo. Este ejemplo sera usado multiples veces a medida que avancemos.
+Inicia con un convertidor de temperatura de Celsius a Fahrenheit. No usaremos números flotantes para simplificar el ejemplo. Este ejemplo se usará múltiples veces a medida que avancemos.
 
 - Ordenar la salida del programa
 - Aceptar entrada por teclado
@@ -291,7 +291,7 @@ print fahrenheit
 puts "."
 ```
 
-En la terminal, ubica la carpeta donde esta el archivo, y escrbribes para ejecutar: `ruby c2fi.rb`
+En la terminal, ubica la carpeta donde está el archivo y escribe para ejecutar: `ruby c2fi.rb`
 
 Acortando el código
 
@@ -407,24 +407,24 @@ El resto de la información de configuración está disponible de la misma maner
 | sitelibdir  |    Tus propias extensiones del lenguaje Ruby (escrito en Ruby)     |
 | sitearchdir |      Tus propias extensiones del lenguaje Ruby (escrito en C)      |
 
-La siguiente sección contiene una lista de carpetas de intalación y lo que contienen.
+La siguiente sección contiene una lista de carpetas de instalación y lo que contienen.
 
-### 1.2.1 Libreria estandar (RbConfig::CONFIG[“rubylibdir”])
+### 1.2.1 Librería estándar (RbConfig::CONFIG[“rubylibdir”])
 
-En rubylibdir encontraras programas escritos en Ruby. Almacenan librerias estandar, estas son sus funcionalidades:
+En `rubylibdir` encontrarás programas escritos en Ruby. Almacena librerías estándar; estas son sus funcionalidades:
 
 - uri.rb - Herramientas para el manejo uniforme de URIs
 - fileustils.rb - Utilidades para manipular archivos de forma fácil desde programas de Ruby.
 - tempfile.rb - Mecanismos automáticos para la creación de archivos temporales.
 - benchmark.rb - Una librería que mide el rendimiento de programas.
 
-La mayoría de los programadores solo utilizan un subconjunto de estas librerias, pero incluso una fracción de esta colección tan grande de bibliotecas de programación ofrece mucho con lo que trabajar.
+La mayoría de los programadores solo utilizan un subconjunto de estas librerías, pero incluso una fracción de esta colección tan grande de bibliotecas de programación ofrece mucho con lo que trabajar.
 
 ### 1.2.2 El directorio de extensiones C (RbConfig::CONFIG[“archdir”])
 
 Generalmente ubicado un nivel por debajo de rubylibdir, `archdir` contiene extensiones y bibliotecas específicas de la arquitectura. Los archivos en este directorio suelen tener nombres que terminan en .so, .dll o .bundle (según el hardware y el sistema operativo).
 
-### 1.2.3 The site_ruby (RbConfig::CONFIG[“sitedir”]) and vendor_ruby (RbConfig::CONFIG[“vendordir”]) directories
+### 1.2.3 Los directorios site_ruby (RbConfig::CONFIG[“sitedir”]) y vendor_ruby (RbConfig::CONFIG[“vendordir”])
 
 Tu instalación de Ruby incluye un subdirectorio llamado site_ruby, donde tú o tu administrador de sistema podéis almacenar extensiones y bibliotecas de terceros. Algunas de ellas pueden ser código que tú mismo escribas, y otras serán herramientas que descargues de sitios web de terceros y de archivos de bibliotecas de Ruby.
 
@@ -738,7 +738,7 @@ La tarea definida aquí se invoca así:
 
 ### 1.4.4 Instalación de paquetes con el comando gem
 
-La libreria RubyGems falicita la instalacion de librerias y aplicaciones.
+La librería RubyGems facilita la instalación de librerías y aplicaciones.
 
 Instalar una gema de Ruby puede ser, y generalmente lo es, tan fácil como ejecutar un simple comando de instalación:
 
@@ -1514,3 +1514,5 @@ Hello
 Las variables de Ruby suelen describirse como etiquetas o nombres para objetos. A diferencia de otros lenguajes, Ruby no tiene variables tipadas. Cualquier variable puede vincularse a cualquier objeto de cualquier clase en cualquier momento.
 
 La semántica de las referencias y la (re)asignación tiene implicaciones importantes en cómo se desarrolla la llamada a un método con argumentos. ¿Qué recibe el método? ¿Y qué puede hacer con ello?
+
+### Referencias y metodos de argumentos
