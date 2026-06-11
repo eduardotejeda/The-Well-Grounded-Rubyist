@@ -1486,3 +1486,31 @@ x++
 No existe tal operador
 
 La razón es que, debido a la presencia inmediata del 1 en x, x++ sería como 1++, lo que significa que se cambiaría el número 1 por el número 2, y eso no tiene sentido.
+
+En Ruby, cada objeto puede y debe tener una o más referencias. Si no hay referencias, el objeto se considera obsoleto y su espacio de memoria se libera y se reutiliza.
+
+Si tienes dos o más variables que contienen referencias a un mismo objeto, puedes usar cualquiera de ellas, en igualdad de condiciones, para enviar mensajes a dicho objeto. Las referencias tienen una relación de muchos a uno con sus objetos. Sin embargo, si asignas un objeto completamente nuevo a una variable que ya hace referencia a un objeto, la situación cambia.
+
+### 2.5.2 Referencias en la asignación y reasignación de variables
+
+Cada vez que asignas un valor a una variable —cada vez que colocas el nombre de una variable a la izquierda de un signo igual y algo más a la derecha— empiezas de cero: la variable se borra y se realiza una nueva asignación.
+
+Aquí tienes una nueva versión de nuestro ejemplo anterior que ilustra este punto:
+
+```
+str = "Hello"
+abc = str
+str = "Goodbye"
+puts str
+puts abc
+```
+
+Esta vez el resultado es:
+
+```
+Goodbye
+Hello
+```
+Las variables de Ruby suelen describirse como etiquetas o nombres para objetos. A diferencia de otros lenguajes, Ruby no tiene variables tipadas. Cualquier variable puede vincularse a cualquier objeto de cualquier clase en cualquier momento.
+
+La semántica de las referencias y la (re)asignación tiene implicaciones importantes en cómo se desarrolla la llamada a un método con argumentos. ¿Qué recibe el método? ¿Y qué puede hacer con ello?
